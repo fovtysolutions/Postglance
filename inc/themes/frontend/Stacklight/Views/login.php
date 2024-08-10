@@ -7,7 +7,7 @@
 					<div class="d-flex justify-content-center align-items-center h-100">
 						<div class="p-50 w-100">
 							<div class="headline mb-4">
-								<h2 class="fs-25 fw-6 mb-0"><?php _e("Login")?></h2>
+								<h2 class="fs-25 fw-6 mb-0"><?php _e("Fovty Solutions")?></h2>
 								<div class="text-gray-600"><?php _e("Sign In To Your Account")?></div>
 							</div>
 

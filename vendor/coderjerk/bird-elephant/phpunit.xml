@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        colors="true"
+        bootstrap="bootstrap.php"
+        testdox="true">
+    <testsuites>
+        <testsuite name="Bird ElephantTest Suite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

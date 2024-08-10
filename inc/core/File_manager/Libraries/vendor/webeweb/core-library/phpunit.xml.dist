@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         colors="true">
+    <filter>
+        <whitelist>
+            <directory>./src</directory>
+            <exclude>
+                <directory>src/types/Resources</directory>
+                <directory>tests</directory>
+                <directory>util</directory>
+                <directory>vendor</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <testsuites>
+        <testsuite name="webeweb/core-library">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
