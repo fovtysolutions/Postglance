@@ -1,0 +1,8 @@
+{
+    "require": {
+        "unsplash/unsplash": "^3.2",
+        "webeweb/pexels-library": "^3.1",
+        "zoonman/pixabay-php-api": "^2.0",
+        "aws/aws-sdk-php": "^3.296"
+    }
+}
