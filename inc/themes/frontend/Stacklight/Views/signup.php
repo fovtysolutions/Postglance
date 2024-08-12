@@ -14,7 +14,7 @@
                                 <p class="text">Already have an account ? <a href="<?php _ec( base_url("login") )?>" class="btn-link text-primary">Login</a></p>
 								
                             </div>
-                            <form action="<?php _ec( base_url("auth/signup") )?>" data-redirect="<?php _ec( base_url("login") )?>" method="POST">
+                            <form class="actionForm" action="<?php _ec( base_url("auth/signup") )?>" data-redirect="<?php _ec( base_url("login") )?>" method="POST">
                                 <div class="row gy-4">
                                     <div class="col-12">
                                         <div class="form-group">
@@ -85,16 +85,15 @@
 
 									<div class="col-12">
                                         <div class="form-group">
-                                            
                                             <div class="form-control-wrap">
-											<input class="form-check-input m-t-5" type="checkbox" value="1" name="agree_terms" id="agree_terms">
-								  	<label class="form-check-label" for="remember">
-								    	<?php _e("Accept Terms & Conditions")?>
-								  	</label>
+                                                <input class="" type="checkbox" value="1" name="agree_terms" id="agree_terms">
+                                                <label class="form-check-label" for="remember">
+                                                    <?php _e("Accept Terms & Conditions")?>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
-                                   
+									<div class="show-message mb-2"></div>
                                     <div class="col-12">
                                         <div class="form-group">
                                             <button class="btn btn-block btn-primary" type="submit">Login to Your Account</button>

@@ -11,9 +11,9 @@
                                     </a>
                                 </div>
                                 <h3 class="title mb-2">Login to your account</h3>
-                                <p class="text">Not a member yet? <a href="../signup" class="btn-link text-primary">Sign Up</a>.</p>
+                                <p class="text">Not a member yet? <a href="<?php _ec( base_url("signup") )?>" class="btn-link text-primary">Sign Up</a>.</p>
                             </div>
-                            <form action="<?php _ec( base_url("auth/login") )?>" data-redirect="<?php _ec( base_url("dashboard") )?>" method="POST">
+                            <form class="actionForm" action="<?php _ec( base_url("auth/login") )?>" data-redirect="<?php _ec( base_url("dashboard") )?>" method="POST">
                                 <div class="row gy-4">
                                     <div class="col-12">
                                         <div class="form-group">
@@ -43,7 +43,7 @@
                                                 <input class="form-check-input" type="checkbox" value="" id="rememberMe">
                                                 <label class="form-check-label" for="rememberMe"> Remember Me </label>
                                             </div>
-                                            <a href="../forgot-password" class="d-inline-block fs-16">Forgot Password?</a>
+                                            <a href="<?php _ec( base_url("forgot_password") )?>" class="d-inline-block fs-16">Forgot Password?</a>
                                         </div>
                                     </div>
                                     <div class="show-message mb-2"></div>
@@ -61,7 +61,7 @@
                             </div>
                             <div class="pt-4">
                                 <a href="#" class="btn btn-outline-gray-50 text-dark w-100">
-                                    <img src="a.png" alt="" class="icon">
+                                    <img src="<?php _ec( get_frontend_url() )?>Assets/img/a.png" alt="" class="icon">
                                     <span>Login with Google</span>
                                 </a>
                             </div>
@@ -80,7 +80,7 @@
                                     <p class="small" style="color:#213343;font-size:0.85rem!important">I’m really impressed with Postglance sleek and intuitive interface. It simplifies scheduling and planning for your social media calendar, making organization a breeze. If you're looking to elevate your social media strategy, I highly recommend giving it a try!</p>
                                     <div class="media-group align-items-center pt-3">
                                         <div class="media media-md media-circle media-middle">
-                                            <img src="t-1.jpg" alt="avatar">
+                                            <img src="<?php _ec( get_frontend_url() )?>Assets/img/t-1.jpg" alt="avatar">
                                         </div>
                                         <div class="media-text">
                                             <div class="h5 mb-0">John Michel</div>
