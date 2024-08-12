@@ -12,7 +12,7 @@
     </div> -->
     <!-- p-l-20 -->
     <div class="d-flex mb-10  p-l-10 p-r-20 m-b-12">
-    <div class="sidebar-nav sidebar-nav-one d-flex flex-column flex-column-fluid w-100 pt-lg-0 hide-x-scroll">
+    <div class="sidebar-nav sidebar-nav-one d-flex flex-column flex-column-fluid w-100 pt-lg-3 hide-x-scroll">
             <ul class="nav flex-column">
              <li class="nav-item mb-1">
                                 <a href="https://app.postglance.com/dashboard" class="nav-link d-flex p-t-12 p-b-12 active text-primary">

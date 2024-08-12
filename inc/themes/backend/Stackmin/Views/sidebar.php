@@ -24,8 +24,8 @@
                 <?php foreach ($top_sidebar as $key => $menus): ?>
                     <?php foreach ($menus as $key => $row): ?>
                         <?php if( ! isset( $row['sub_menu'] ) ){?>
-                            <li class="nav-item mb-2" style="padding:0px">
-                                <a href="<?php _e( base_url( $row['id'] ) )?>" class="nav-link d-flex p-t-12 p-b-12 <?php _e( uri('segment', 1) == $row['id']?'active text-primary':'hoverable' )?>" <?php _ec( ( get_option("sidebar_type", "sidebar-small") == "sidebar-close"  )?'title="'.$row['name'].'" data-toggle="tooltip" data-placement="right"':'' )?> >
+                            <li class="nav-item mb-2">
+                                <a href="<?php _e( base_url( $row['id'] ) )?>" style="padding:0px" class="nav-link d-flex p-t-12 p-b-12 <?php _e( uri('segment', 1) == $row['id']?'active text-primary':'hoverable' )?>" <?php _ec( ( get_option("sidebar_type", "sidebar-small") == "sidebar-close"  )?'title="'.$row['name'].'" data-toggle="tooltip" data-placement="right"':'' )?> >
                                     <i class="bi bi-speedometer2 icon-color fs-20"  ></i>
                                 </a>
                             </li>

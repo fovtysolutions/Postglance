@@ -2,21 +2,17 @@
     .notification{
         margin-top:4.5rem;
         height:2.5rem;
-        background: #fc7c5c !important;
+        background: #ff5c35 !important;
+        color:#fff
     }
 </style>
 <div class="header bg-white align-items-stretch notification justify-content-evenly">
-    <div class="container-fluid d-flex align-items-stretch  h-100">
-        <div class="d-flex flex-lg-grow-1">
-            <div class="d-flex align-items-stretch ms-1 ms-lg-3">
-                <div class="d-flex align-items-stretch ms-2 ms-lg-3">
-                    <div class="d-flex align-items-center">
-                        <a href="<?php _ec( base_url("dashboard") )?>" style="text-align:center !important;">
-                            Invalid Email!!
-                        </a>
+    <div class="container-fluid align-items-stretch d-flex  h-100">
+       
+            
+                    <div  class="notification-bar-content"><span _ngcontent-wra-c421=""><span>Verify your email:</span> An email has been sent to your inbox to verify your email address.</span>
                     </div>
-                </div>
-            </div>
-        </div>
+                
+       
     </div>
 </div>
