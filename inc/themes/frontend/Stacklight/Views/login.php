@@ -46,6 +46,7 @@
                                             <a href="../forgot-password" class="d-inline-block fs-16">Forgot Password?</a>
                                         </div>
                                     </div>
+                                    <div class="show-message mb-2"></div>
                                     <div class="col-12">
                                         <div class="form-group">
                                             <button class="btn btn-block btn-primary" type="submit">Login to Your Account</button>
