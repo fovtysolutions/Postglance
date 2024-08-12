@@ -44,6 +44,7 @@
         </div>
 
         <?php _ec( $this->include('Backend\Stackmin\Views\header'), false )?>
+        <?php _ec( $this->include('Backend\Stackmin\Views\stripline'), false )?>
 
         <div class="d-flex h-100">
             <?php _ec( $this->include('Backend\Stackmin\Views\sidebar'), false )?>

@@ -1,4 +1,4 @@
-<div class="sidebar-wrapper">
+<div class="sidebar-wrapper" style="width:63px">
     <div class="sidebar d-flex flex-column align-items-lg-center flex-row-auto h-100" >
         <div class="sidebar-logo d-flex flex-column align-items-center flex-column-auto pt-0 py-3">
             <a href="<?php _ec( base_url("dashboard") )?>">
@@ -15,11 +15,25 @@
                 $top_sidebar = $request->top_sidebar; 
                 ?>
 
-                        <li class="nav-item mb-2">
-                                <a href="#" class="nav-link d-flex p-b-12">
-                                <i class="bi bi-speedometer2 icon-color"></i>
+                <!-- <li class="nav-item mb-2">
+                    <a href="#" class="nav-link d-flex p-b-12">
+                        <i class="bi bi-speedometer2 icon-color"></i>
+                    </a>
+                </li> -->
+
+                <?php foreach ($top_sidebar as $key => $menus): ?>
+                    <?php foreach ($menus as $key => $row): ?>
+                        <?php if( ! isset( $row['sub_menu'] ) ){?>
+                            <li class="nav-item mb-2" style="padding:0px">
+                                <a href="<?php _e( base_url( $row['id'] ) )?>" class="nav-link d-flex p-t-12 p-b-12 <?php _e( uri('segment', 1) == $row['id']?'active text-primary':'hoverable' )?>" <?php _ec( ( get_option("sidebar_type", "sidebar-small") == "sidebar-close"  )?'title="'.$row['name'].'" data-toggle="tooltip" data-placement="right"':'' )?> >
+                                    <i class="bi bi-speedometer2 icon-color fs-20"  ></i>
                                 </a>
                             </li>
+                        <?php }else{?>
+                            
+                        <?php }?>
+                    <?php endforeach ?>
+                <?php endforeach ?>
             </ul>
         </div>
      
