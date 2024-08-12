@@ -57,7 +57,7 @@ body.sidebar-open .header{
     z-index: 200;
 	position: relative;
 	top: 0;
-	background-color: #fff;
+	background-color: #ff5c35;
 	box-shadow: 0 0 80px 50px rgb(206 213 225 / 12%);
 }
 
@@ -568,4 +568,9 @@ body.sidebar-dark .sidebar .nav-line{
 /**/
 .piv-text{
 	word-break: break-word;
+}
+
+.icon-color{
+	color:#fff;
+	font-size:28px
 }

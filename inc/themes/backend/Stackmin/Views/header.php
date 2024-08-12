@@ -8,7 +8,13 @@
                             <a href="javascript:void(0);" class="btn btn-light-primary px-3 btn-open-sidebar">
                                 <i class="fad fa-bars p-r-0 fs-20"></i>
                             </a>
+
                         </div>
+                        <a href="<?php _ec( base_url("dashboard") )?>">
+              
+                 <img alt="Logo" src="<?php _ec( base_url("assets/img/logo-main.png"))?>" class="logo-small h-39"> 
+
+            </a>
                     </div>
                 </div>
                 <div class="d-flex align-items-stretch ms-2 ms-lg-3">

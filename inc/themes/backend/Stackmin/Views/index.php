@@ -6,7 +6,7 @@
         <meta name="description" content="<?php _e( get_option("website_description", "") )?>" />
         <meta name="keywords" content="<?php _e( get_option("website_description", "") )?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" href="<?php _ec( get_option("website_favicon", base_url("assets/img/favicon.svg")) )?>" />
+        <link rel="shortcut icon" href="<?php _ec( base_url("assets/img/favicon-1.png")) ?>" />
         <link href="<?php _ec( get_theme_url() ) ?>Assets/fonts/fontawesome/css/all.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php _ec( get_theme_url() ) ?>Assets/fonts/icomoon/icomoon.css" rel="stylesheet" type="text/css" />
         <link href="<?php _ec( get_theme_url() ) ?>Assets/fonts/flags/flag-icon.css" rel="stylesheet" type="text/css" />
@@ -28,10 +28,12 @@
         <link href="<?php _ec( get_theme_url() ) ?>Assets/css/animate.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php _ec( get_theme_url() ) ?>Assets/css/style.css" rel="stylesheet" type="text/css" />
         <script src="<?php _ec( get_theme_url() ) ?>Assets/plugins/jquery/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <?php _ec( load_files("css") );?>
         <?php _ec( add_script_to_header() )?>
     </head>
-    <body class="<?php _ec( get_option("sidebar_type", "sidebar-small") )?> <?php _ec( get_option("theme_color", "light") )?>">
+    <!-- <body class="<?php //_ec( get_option("sidebar_type", "sidebar-small") )?> <?php //_ec( get_option("theme_color", "light") )?>"> -->
+    <body >
         <div class="loading">
             <div class="loading-icon">
                 <span></span>
