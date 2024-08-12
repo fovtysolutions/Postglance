@@ -9884,6 +9884,8 @@ textarea.form-control-lg {
 }
 .text-gray-600 {
     color: var(--sp-text-gray-600) !important;
+    margin-left: 1rem !important;
+    font-size:1.17rem;
 }
 .text-hover-gray-600 {
     transition: color 0.2s ease, background-color 0.2s ease;
