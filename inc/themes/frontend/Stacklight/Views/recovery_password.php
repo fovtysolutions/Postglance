@@ -19,10 +19,10 @@
                                         <div class="form-group">
                                             <label class="form-label">Password</label>
                                             <div class="form-control-wrap">
-                                                <a href="new-password" class="form-control-icon end password-toggle" title="Toggle show/hide password">
+                                                <!-- <a href="new-password" class="form-control-icon end password-toggle" title="Toggle show/hide password">
                                                     <em class="on icon ni ni-eye-fill text-primary"></em>
                                                     <em class="off icon ni ni-eye-off-fill text-primary"></em>
-                                                </a>
+                                                </a> -->
                                                 <input  name="new_password" type="password" value="" class="form-control" placeholder="<?php _e("Enter new password")?>">
                                             </div>
                                         </div>
@@ -31,10 +31,10 @@
                                         <div class="form-group">
                                             <label class="form-label">Confirm Password</label>
                                             <div class="form-control-wrap">
-                                                <a href="confirm-password" class="form-control-icon end password-toggle" title="Toggle show/hide password">
+                                                <!-- <a href="confirm-password" class="form-control-icon end password-toggle" title="Toggle show/hide password">
                                                     <em class="on icon ni ni-eye-fill text-primary"></em>
                                                     <em class="off icon ni ni-eye-off-fill text-primary"></em>
-                                                </a>
+                                                </a> -->
                                                 <input name="confirm_new_password" type="password" class="form-control"  value="" placeholder="<?php _e("Enter confirm new password")?>">
                                             </div>
                                         </div>
