@@ -28,7 +28,7 @@
                                     <div class="g-recaptcha  mb-3" data-sitekey="<?=get_option('google_recaptcha_site_key', '')?>"></div>
                                     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                                     <?php }?>
-                                    
+                                    <div class="show-message mb-2"></div>
                                     <div class="col-12">
                                         <div class="form-group">
                                         <button class="btn btn-block btn-primary" type="submit">Submit</button>
