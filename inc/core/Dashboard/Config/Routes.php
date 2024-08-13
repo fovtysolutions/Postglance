@@ -1,5 +1,6 @@
 <?php
 $config = include realpath( __DIR__."/../Config.php" );
+
 if (!defined('MODULE_CONFIG')){
     define("MODULE_CONFIG", $config);
 }
@@ -25,3 +26,5 @@ if ( file_exists( realpath(  __DIR__."/../Helpers" ) ) ) {
         }
     }
 }
+?>
+<script>console.log("<?php echo __DIR__."/../Config.php" ?>")</script>
