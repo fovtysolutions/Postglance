@@ -9,7 +9,7 @@ body, html {
     font-size: 14px!important;
     font-weight: 400;
     color: var(--sp-gray-800);
-    font-family: Queens Medium, serif;
+    font-family: Proxima Nova,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--sp-app-bg-color);
@@ -54,11 +54,15 @@ body.sidebar-open .header{
 * Sidebar
 */
 .sidebar{
-    z-index: 200;
-	position: relative;
-	top: 0;
+  
 	background-color: #ff5c35;
 	box-shadow: 0 0 80px 50px rgb(206 213 225 / 12%);
+	position: fixed;
+    top: 0;
+    left: 0;
+   width:63px;
+    
+    z-index: 1000;
 }
 
 .sidebar .sidebar-nav{
@@ -583,4 +587,24 @@ body.sidebar-dark .sidebar .nav-line{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.notification-card {
+    position: absolute;
+    top: 64.4px;
+    right: 10px;
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 50px 0 rgb(82 63 105 / 20%);
+    display: none; /* Hide the card by default */
+	border-radius: .475rem;
+}
+
+#notificationIcon {
+    cursor: pointer;
+}
+.dashboard-icon{
+	font-size: 24px;
+    color: #ff5c35;
 }

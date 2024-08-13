@@ -27,6 +27,7 @@
         <link href="<?php _ec( get_theme_url() ) ?>Assets/plugins/monthly/monthly.css" rel="stylesheet" type="text/css" />
         <link href="<?php _ec( get_theme_url() ) ?>Assets/css/animate.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php _ec( get_theme_url() ) ?>Assets/css/style.css" rel="stylesheet" type="text/css" />
+        
         <script src="<?php _ec( get_theme_url() ) ?>Assets/plugins/jquery/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <?php _ec( load_files("css") );?>
@@ -42,9 +43,12 @@
                 <span></span>
             </div>
         </div>
-
-        <?php _ec( $this->include('Backend\Stackmin\Views\header'), false )?>
+       
         <?php _ec( $this->include('Backend\Stackmin\Views\stripline'), false )?>
+        <?php _ec( $this->include('Backend\Stackmin\Views\header'), false )?>
+       
+       
+       
 
         <div class="d-flex h-100">
             <?php _ec( $this->include('Backend\Stackmin\Views\sidebar'), false )?>
