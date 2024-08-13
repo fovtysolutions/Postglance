@@ -7,7 +7,7 @@
                             <div class="nk-form-card-head pb-5">
                                 <div class="form-logo mb-3">
                                     <a href="../">
-                                        <img class="logo-img" src="<?php _ec( get_frontend_url() )?>Assets/img/logo-s1-dark.png" width="200" height="40" alt="">
+                                        <img class="" src="<?php _ec( get_frontend_url() )?>Assets/img/logo-s1-dark.png" width="200" height="40" alt="">
                                     </a>
                                 </div>
                                 <h3 class="title mb-2">Signup</h3>
