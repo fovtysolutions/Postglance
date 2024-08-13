@@ -24,7 +24,7 @@
                 <?php foreach ($top_sidebar as $key => $menus): ?>
                     <?php foreach ($menus as $key => $row): ?>
                         <?php if( ! isset( $row['sub_menu'] ) ){?>
-                            <li class="nav-item mb-3">
+                            <li class="nav-item mb-1 mt-2">
                                 <a href="<?php _e( base_url( $row['id'] ) )?>" style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e( uri('segment', 1) == $row['id']?'active text-primary':'hoverable' )?>" <?php _ec( ( get_option("sidebar_type", "sidebar-small") == "sidebar-close"  )?'title="'.$row['name'].'" data-toggle="tooltip" data-placement="right"':'' )?> >
                                     <i class="<?php _e( $row['icon'] )?> icon-color fs-20"  ></i>
                                 </a>
