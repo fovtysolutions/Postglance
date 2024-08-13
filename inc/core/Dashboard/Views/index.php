@@ -7,7 +7,7 @@ if ( !$request->isAJAX() ) {
     ?>
 
     <?php echo $this->section('content') ?>
-    <?php _ec( $this->include('Core\Dashboard\Views\sidebar'), false);?>
+    <?php //_ec( $this->include('Core\Dashboard\Views\sidebar'), false);?>
     <div class="main-wrapper flex-grow-1 n-scroll <?php _ec( $config['id']."-main" )?>">
         <?php if (!check_expiration_date()): ?>
         <div class="container pt-5">

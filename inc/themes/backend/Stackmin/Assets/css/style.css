@@ -60,7 +60,7 @@ body.sidebar-open .header{
 	position: fixed;
     top: 0;
     left: 0;
-   width:63px;
+    width:63px;
     
     z-index: 1000;
 }
