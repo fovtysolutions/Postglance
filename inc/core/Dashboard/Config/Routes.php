@@ -27,4 +27,3 @@ if ( file_exists( realpath(  __DIR__."/../Helpers" ) ) ) {
     }
 }
 ?>
-<script>console.log("<?php echo __DIR__."/../Config.php" ?>")</script>
