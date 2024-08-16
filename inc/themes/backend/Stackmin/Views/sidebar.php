@@ -1,3 +1,33 @@
+
+<head>
+    <style>
+        .custom-border-hover {
+    position: relative;
+}
+
+.custom-border-hover::before {
+    content: '';
+    position: absolute;
+    top:50%;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #fff; /* Customize the color as needed */
+    opacity: 0;
+    transform: translateY(-50%) scaleY(0);
+   
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    transform-origin: center;
+    border-radius: 2px;
+}
+
+.custom-border-hover:hover::before {
+    opacity: 1;
+    transform: translateY(-50%) scaleY(1);
+}
+    </style>
+</head>
+
 <div class="sidebar-wrapper" style="width:63px;">
     <div class="sidebar d-flex flex-column align-items-lg-center flex-row-auto h-100" >
         <div class="sidebar-logo d-flex flex-column align-items-center flex-column-auto pt-0">
@@ -24,9 +54,9 @@
                 <?php foreach ($top_sidebar as $key => $menus): ?>
                     <?php foreach ($menus as $key => $row): ?>
                         <?php if( ! isset( $row['sub_menu'] ) ){?>
-                            <li class="nav-item mb-1 mt-2">
+                            <li class="nav-item mb-1 mt-2 custom-border-hover">
                                 <a href="<?php _e( base_url( $row['id'] ) )?>" style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e( uri('segment', 1) == $row['id']?'active text-primary':'hoverable' )?>" <?php _ec( ( get_option("sidebar_type", "sidebar-small") == "sidebar-close"  )?'title="'.$row['name'].'" data-toggle="tooltip" data-placement="right"':'' )?> >
-                                    <i class="<?php _e( $row['icon'] )?> icon-color fs-20"  ></i>
+                                    <i class="<?php _e( $row['icon'] )?> icon-color  fs-20"  ></i>
                                 </a>
                             </li>
                         <?php }else{?>

@@ -6,7 +6,7 @@ return [
     'author' => 'Stackcode',
     'author_uri' => 'https://stackposts.com',
     'desc' => 'Customize system interface',
-    'icon' => 'fad fa-home',
+    'icon' => 'bi bi-speedometer2',
     'color' => '#28abf5',
     'require' => true,
     'menu' => [

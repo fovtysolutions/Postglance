@@ -6,7 +6,7 @@
         color:#fff
     }
 </style>
-<div class="header bg-white align-items-stretch notification justify-content-evenly">
+<div class="header bg-white align-items-stretch notification justify-content-evenly d-none d-md-block">
     <div class="container-fluid align-items-stretch d-flex  h-100">
        
             

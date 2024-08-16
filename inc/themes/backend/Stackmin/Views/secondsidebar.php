@@ -10,6 +10,7 @@
    margin-left: 0rem !important; */
     font-size: 1.17rem;
 }
+
     </style>
 </head>
 
@@ -28,31 +29,31 @@
                           
                             <li class="nav-item mb-2">
                                 <a href="https://app.postglance.com/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
-                                <i class="fad fa-calendar-alt dashboard-icon me-4"></i>
+                                <i class="far fa-calendar-alt dashboard-icon me-4"></i>
                                     <span class="text-gray-600 fw-5">Schedule</span>
                                 </a>
                             </li>
                             <li class="nav-item mb-2">
                                 <a href="https://app.postglance.com/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
-                                <i class="fad fa-rocket dashboard-icon me-4" aria-hidden="true"></i>
+                                <i class="bi bi-rocket-takeoff dashboard-icon me-4" aria-hidden="true"></i>
                                     <span class="text-gray-600 fw-5">Free Trial</span>
                                 </a>
                             </li>
                             <li class="nav-item mb-2">
                                 <a href="https://app.postglance.com/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
-                                <i class="fad fa-alien-monster dashboard-icon me-4" style="font-size:21px"></i>
+                                <i class="	fas fa-user-astronaut dashboard-icon me-4" style="font-size:21px"></i>
                                     <span class="text-gray-600 fw-5">Open AI</span>
                                 </a>
                             </li>
                             <li class="nav-item mb-2">
                                 <a href="https://app.postglance.com/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
-                                <i class="fad fa-users-crown dashboard-icon me-3"></i>
+                                <i class="fas fa-users dashboard-icon me-3"></i>
                                     <span class="text-gray-600 fw-5">Team</span>
                                 </a>
                             </li>
                             <li class="nav-item mb-2">
                                 <a href="https://app.postglance.com/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
-                                <i class="fal fa-comment-alt-lines dashboard-icon me-4"></i>
+                                <i class="fab fa-firstdraft dashboard-icon me-4"></i>
                                 
                                     <span class="text-gray-600 fw-5">Draft</span>
                                 </a>
