@@ -13,7 +13,8 @@ if(
 ){
     $routes->setDefaultNamespace( ucfirst($config['folder']) . "/" . ucfirst($config['menu']['sub_menu']["id"]) . "/Controllers");
 }else if( url_is( $config["id"] ) || url_is( $config["id"].'/*' ) ){
-    $routes->setDefaultNamespace( ucfirst($config['folder']) . "/" . ucfirst($config['id']) . "/Controllers");
+     $routes->setDefaultNamespace( ucfirst($config['folder']) . "/" . ucfirst($config['id']) . "/Controllers");
+     $radhe = ucfirst($config['id']);
 }
 
 if ( file_exists( realpath(  __DIR__."/../Helpers" ) ) ) {
@@ -27,3 +28,4 @@ if ( file_exists( realpath(  __DIR__."/../Helpers" ) ) ) {
     }
 }
 ?>
+<script>console.log("<?php //var_dump($radhe)?>")</script>

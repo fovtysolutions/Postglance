@@ -17,8 +17,10 @@ class Ai_content_generator extends \CodeIgniter\Controller
             "config"  => $this->config,
         ];
 
-        $result = db_fetch("*", TB_AI_PROMPT_CATEGORIES, ["status" => 1], "created", "ASC");
-        $templates = db_fetch("*", TB_AI_PROMPT_TEMPLATES, ["status" => 1], "created", "ASC");
+        // $result = db_fetch("*", TB_AI_PROMPT_CATEGORIES, ["status" => 1], "created", "ASC");
+        // $templates = db_fetch("*", TB_AI_PROMPT_TEMPLATES, ["status" => 1], "created", "ASC");
+        $templates = '';
+        $result = '';
 
         $data_content = [
             "result" => $result,

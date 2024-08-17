@@ -9,7 +9,8 @@ class Ai_prompt_templates extends \CodeIgniter\Controller
     }
     
     public function index( $page = false, $ids = "" ) {
-        $result = db_fetch("*", TB_AI_PROMPT_CATEGORIES, [], "created", "ASC");
+        // $result = db_fetch("*", TB_AI_PROMPT_CATEGORIES, [], "created", "ASC");
+        $result = '';
 
         $data = [
             "result" => $result,

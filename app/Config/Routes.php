@@ -83,6 +83,7 @@ if (file_exists(ROOTPATH.'inc/core')) {
         if (is_dir($modulesPath) . '/' . $module) {
             $routesPath = $modulesPath . $module . '/Config/Routes.php';
             if (file_exists($routesPath)) {
+                // echo "<script>console.log('$routesPath');</script>";
                 require($routesPath);
             } else {
                 continue;
