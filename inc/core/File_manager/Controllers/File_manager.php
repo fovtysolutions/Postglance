@@ -385,6 +385,7 @@ class File_manager extends \CodeIgniter\Controller
             $url = post("url");
         }
 
+        $folder = 0;
         if($folder_id == ""){
             $folder = (int)post("folder");
         }

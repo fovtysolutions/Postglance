@@ -1,0 +1,17 @@
+<?php return array (
+  'One-time payment status' => 'One-time payment status',
+  'Enable' => 'Enable',
+  'Disable' => 'Disable',
+  'Recurring payment status' => 'Recurring payment status',
+  'Client ID' => 'Client ID',
+  'Client Secret Key' => 'Client Secret Key',
+  'Payment sale completed, Billing subscription cancelled' => 'Payment sale completed, Billing subscription cancelled',
+  'Webhook ID' => 'Webhook ID',
+  'Webhook URL:' => 'Webhook URL:',
+  'Required events:' => 'Required events:',
+  'Paypal' => 'Paypal',
+  'One-time payment' => 'One-time payment',
+  'You are using the monthly payment plan. Cancel it if you want to change the package or change your payment method.' => 'You are using the monthly payment plan. Cancel it if you want to change the package or change your payment method.',
+  'Annually' => 'Annually',
+  'Monthly' => 'Monthly',
+);

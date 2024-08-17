@@ -77,9 +77,9 @@ if(!function_exists('generate_text_bk')){
 if(!function_exists('generate_text')){
     function generate_text($messages, $max_lenght = 200, $number_of_results = 1, $limit_tokens = -1){
 
-        if ( !get_option("openai_status", 0) || !permission("openai_content") || !permission("openai") ){
+        /*if ( !get_option("openai_status", 0) || !permission("openai_content") || !permission("openai") ){
             throw new Exception( "You do not have sufficient permissions to use this feature. You need OpenAI permissions to use this feature." , 1);
-        }
+        }*/
 
         $usage_tokens = get_team_data("openai_usage_tokens", 0);
 
@@ -131,9 +131,9 @@ if(!function_exists('generate_text')){
 if(!function_exists('generate_image')){
     function generate_image($suggestion, $size = "1024x1024", $qty = 1){
 
-        if ( !get_option("openai_status", 0) || !permission("openai_image") || !permission("openai") ){
+        /*if ( !get_option("openai_status", 0) || !permission("openai_image") || !permission("openai") ){
             throw new Exception( "You do not have sufficient permissions to use this feature. You need OpenAI permissions to use this feature." , 1);
-        }
+        }*/
 
         if($suggestion == ""){
             throw new Exception( __("Suggestion is required") , 1);

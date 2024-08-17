@@ -32,7 +32,7 @@
 						<a href="<?php _ec( base_url("profile/index/plan") )?>" class="btn bg-gray-100 b-r-6 text-gray-900 mt-2 b-r-15 fw-5"><?php _e("View plan")?></a>
 					</div>
 					<div class="flex-fill">
-						<img src="<?php _ec( get_module_path( __DIR__, "Assets/img/badge.svg" ) )?>" class="w-99">
+						<!-- <img src="<?php _ec( get_module_path( __DIR__, "Assets/img/badge.svg" ) )?>" class="w-99"> -->
 					</div>
 
 				</div>
@@ -46,7 +46,7 @@
 						<?php foreach ($result as $key => $value): ?>
 							<a href="<?php _ec( base_url( $value["id"] ) )?>" class="d-block border b-r-15 p-20 miw-150 text-over-all bg-gray-100 me-4 text-center">
 								<div class="fs-50 text-primary">
-									<i class="<?php _ec($value['icon'])?>" style="color: <?php _ec($value['color'])?>"></i>
+									<i class="<?php _ec($value['icon'])?>" style="color: #EF3208"></i>
 								</div>
 
 								<div class="fw-6 text-gray-800">

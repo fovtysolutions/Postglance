@@ -10,7 +10,8 @@ class Schedules extends \CodeIgniter\Controller
     
     public function index( $type = "", $method = "", $social_network = "", $time = "" ) {
         $query_id = (int)post("query_id");
-        
+        if(!in_array($type, ["queue", "published", "unpublished"]) || $social_network == "" || $social_network == "undefined" || !in_array($method, ["all", "ai", "basic", "rss"])) redirect_to( get_module_url("index/queue/all/all/") );
+
         if($query_id > 0){
             $categories = $this->model->categories();  
             $method_post = $this->model->method_post();
@@ -18,8 +19,6 @@ class Schedules extends \CodeIgniter\Controller
             $categories = "";
             $method_post = "";
         }
-       
-
         $result = $this->model->list($type, $method, $social_network, $time, $query_id);
 
         $list_schedules = view('Core\Schedules\Views\list', ['result' => $result]);
@@ -42,7 +41,6 @@ class Schedules extends \CodeIgniter\Controller
 
     public function get($type = "", $method = "", $social_network = ""){
         $query_id = (int)post("query_id");
-        
         if($query_id > 0){
             $posts = $this->model->calendar($type, $method, $social_network, $query_id);
         }else{

@@ -1,0 +1,17 @@
+<?php return array (
+  'Search' => 'Search',
+  'Your name' => 'Your name',
+  'Learn more' => 'Learn more',
+  'Book' => 'Book',
+  'Order online' => 'Order online',
+  'Shop' => 'Shop',
+  'Sign up' => 'Sign up',
+  'Enter your link' => 'Enter your link',
+  'Call To Action' => 'Call To Action',
+  'Success' => 'Success',
+  'Planning and Scheduling' => 'Planning and Scheduling',
+  'Google Business Profile requires an image' => 'Google Business Profile requires an image',
+  'Cannot find the image to upload' => 'Cannot find the image to upload',
+  'Unknown error' => 'Unknown error',
+  'Google Business Profile' => 'Google Business Profile',
+);

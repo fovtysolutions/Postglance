@@ -1,0 +1,8 @@
+.payment-wrap{
+	background-color: #fff;
+}
+
+.payment-banner{
+	background-image: url('../img/bg.jpg');
+	background-size: cover;
+}

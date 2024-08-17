@@ -2,7 +2,7 @@
 	<?php if ( !empty($result) ): ?>
 		<div class="bg-white p-27 fw-bold fs-16 text-uppercase text-gray-800 d-flex justify-content-between align-items-center">
 			<span>
-				<i class="fad fa-list text-primary"></i> <?php _e( sprintf( __("Schedules for %s" ), date_show( uri('segment', 5) ) ) )?>
+				<i class="fad fa-list text-primary"></i> <?php _e( sprintf( __("Schedules for %s" ), date_show( uri('segment', 6) ) ) )?>
 			</span>
 			<a class="btn btn-secondary btn-sm b-r-30 open-schedule-calendar d-lg-none d-md-none d-sm-block d-xs-block d-block" href="javascript:void(0);" >
             	<i class="fad fa-chevron-left"></i> <?php _ec("Back")?>

@@ -19,7 +19,7 @@ class Linkedin_profiles extends \CodeIgniter\Controller
         }else{
             $app_scopes = "r_basicprofile w_member_social w_organization_social r_organization_social rw_organization_admin";
             if(get_session('linkedin_scopes')){
-                 $app_scopes = get_session('linkedin_scopes');
+                 $app_scopes = get_session('set_session');
             }
         }
         

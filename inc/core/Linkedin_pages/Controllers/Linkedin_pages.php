@@ -12,7 +12,7 @@ class Linkedin_pages extends \CodeIgniter\Controller
         $app_id = get_option('linkedin_api_key', '');
         $app_secret = get_option('linkedin_api_secret', '');
         $app_callback = get_module_url();
-        $app_scopes = "r_emailaddress r_basicprofile r_liteprofile w_member_social w_organization_social r_organization_social rw_organization_admin";
+        $app_scopes = "r_basicprofile w_member_social w_organization_social r_organization_social rw_organization_admin";
         $ssl = false;
 
         if($app_id == "" || $app_secret == ""){
@@ -24,73 +24,84 @@ class Linkedin_pages extends \CodeIgniter\Controller
     
     public function index() {
 
-        try {
-            // Check if LinkedIn Access Token is already stored in session
-            if(!get_session("Linkedin_AccessToken")){
-                $response = $this->linkedin->getAccessToken(post('code'));
-                if ($response['status'] == "success") {
-                    $accessToken = $response['accessToken'];
-                    set_session(["Linkedin_AccessToken" => $response['accessToken']]);
-                } else {
-                    $accessToken = false;
-                }
-            } else {
-                $accessToken = get_session("Linkedin_AccessToken");
-            }
-        
-            // Initialize $result as an empty array
-            $result = [];
-        
-            // Proceed if access token is available
-            if ($accessToken) {
-                $response = $this->linkedin->getCompanyPages($accessToken);
-        
-                if (isset($response->elements)) {
-                    foreach ($response->elements as $row) {
-                        $row = (array)$row;
-                        $row = $row['organizationalTarget~'];
-                        $avatar = (array)$row->logoV2;
-                        $avatar = $avatar['original~'];
-                        $avatar = $avatar->elements[0]->identifiers[0]->identifier;
-        
-                        $result[] = (object)[
-                            'id' => $row->id,
-                            'name' => $row->localizedName,
-                            'avatar' => $avatar,
-                            'desc' => $row->vanityName
-                        ];
+       try {
+    if (!get_session("Linkedin_AccessToken")) {
+        $response = $this->linkedin->getAccessToken(post('code'));
+        if ($response['status'] == "success") {
+            $accessToken = $response['accessToken'];
+            set_session(["Linkedin_AccessToken" => $response['accessToken']]);
+        } else {
+            $accessToken = false;
+        }
+    } else {
+        $accessToken = get_session("Linkedin_AccessToken");
+    }
+
+    $result = [];
+
+    if ($accessToken) {
+        $response = $this->linkedin->getCompanyPages($accessToken);
+
+        if (isset($response->elements)) {
+            foreach ($response->elements as $row) {
+                $row = (array) $row;
+                $row = $row['organizationalTarget~'];
+
+                // Initialize avatar
+                $avatar = null;
+                
+                // Check if logoV2 exists and handle its presence
+                if (isset($row->logoV2)) {
+                    $logoV2 = (array) $row->logoV2;
+                    if (isset($logoV2['original~'])) {
+                        $avatar = (array) $logoV2['original~'];
+                        if (isset($avatar['elements'][0]->identifiers[0]->identifier)) {
+                            $avatar = $avatar['elements'][0]->identifiers[0]->identifier;
+                        }
                     }
-        
-                    $profiles = [
-                        "status" => "success",
-                        "config" => $this->config,
-                        "result" => $result
-                    ];
-        
-                } else {
-                    $profiles = [
-                        "status" => "error",
-                        "config" => $this->config,
-                        "message" => __('No profile to add')
-                    ];
                 }
-            } else {
-                $profiles = [
-                    "status" => "error",
-                    "config" => $this->config,
-                    "message" => __('No profile to add')
+
+                $result[] = (object) [
+                    'id' => $row->id,
+                    'name' => $row->localizedName,
+                    'avatar' => $avatar,
+                    'desc' => $row->vanityName
                 ];
             }
-        } catch (\Exception $e) {
+
+            $profiles = [
+                "status" => "success",
+                "config" => $this->config,
+                "result" => $result
+            ];
+
+        } else {
             $profiles = [
                 "status" => "error",
                 "config" => $this->config,
-                "message" => $e->getMessage()
+                "message" => __('No profile to add')
             ];
         }
-        
-        // Now you can return or use $profiles as needed
-        
+    } else {
+        $profiles = [
+            "status" => "error",
+            "config" => $this->config,
+            "message" => __('No profile to add')
+        ];
+    }
+} catch (\Exception $e) {
+    $profiles = [
+        "status" => "error",
+        "config" => $this->config,
+        "message" => $e->getMessage()
+    ];
+}
+
+// Now you can return or use $profiles as needed
+
+
+// Now you can return or use $profiles as needed
+
 
         $data = [
             "title" => $this->config['name'],

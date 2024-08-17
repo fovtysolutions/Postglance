@@ -281,18 +281,40 @@ class LinkedIn
 
     public function curl($url, $parameters, $content_type, $post = true)
     {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->ssl);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        if ($post) {
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $parameters);
-        }
-        curl_setopt($ch, CURLOPT_POST, $post);
-        $headers = [];
-        $headers[] = "Content-Type: {$content_type}";
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        $result = curl_exec($ch);
-        return $result;
+       $ch = curl_init();
+    
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->ssl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 30); // Set a timeout to avoid hanging requests
+
+    if ($post) {
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $parameters);
+    } else {
+        curl_setopt($ch, CURLOPT_POST, false);
+    }
+
+    $headers = [
+        "Content-Type: {$content_type}",
+    ];
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+    // Execute the request
+    $result = curl_exec($ch);
+
+    // Check for errors
+    if (curl_errno($ch)) {
+        $error_message = curl_error($ch);
+        curl_close($ch);
+        throw new \Exception("cURL error: $error_message");
+    }
+
+    // Close the cURL session
+    curl_close($ch);
+
+    // Return the result
+    return $result;
     }
 }
+?>

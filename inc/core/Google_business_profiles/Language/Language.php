@@ -1,0 +1,17 @@
+<?php return array (
+  'Google API Key' => 'Google API Key',
+  'Google Client ID' => 'Google Client ID',
+  'Google Client Secret' => 'Google Client Secret',
+  'Callback URL:' => 'Callback URL:',
+  'Are you sure to delete this items?' => 'Are you sure to delete this items?',
+  'Search' => 'Search',
+  'Add Google Business Profiles' => 'Add Google Business Profiles',
+  'Discard' => 'Discard',
+  'Add profile' => 'Add profile',
+  'If you don\'t see your profiles above, you might try to reconnec, re-accept all permissions, and ensure that you\'re logged in to the correct profile.' => 'If you don\'t see your profiles above, you might try to reconnec, re-accept all permissions, and ensure that you\'re logged in to the correct profile.',
+  'Re-connect with Google' => 'Re-connect with Google',
+  'No profile to add' => 'No profile to add',
+  'Please select a profile to add' => 'Please select a profile to add',
+  'Success' => 'Success',
+  'Google Business Profiles' => 'Google Business Profiles',
+);

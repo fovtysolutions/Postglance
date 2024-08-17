@@ -1,0 +1,5 @@
+{
+    "require": {
+        "coinpaymentsnet/coinpayments-php": "^1.4"
+    }
+}

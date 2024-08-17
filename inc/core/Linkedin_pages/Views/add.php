@@ -79,7 +79,7 @@
                 
                 <div class="card-body">
                     <div class="note">
-                        <div class="desc m-b-15"><?php _e("If you don't see your profiles above, you might try to reconnect, re-accept all permissions, and ensure that you're logged in to the correct profile.")?></div>
+                        <div class="desc m-b-15"><?php _e("If you don't see your profiles above, you might try to reconnec, re-accept all permissions, and ensure that you're logged in to the correct profile.")?></div>
                         <a href="<?php _ec( get_module_url("oauth") )?>" class="btn btn-outline btn-outline-dashed bg-white"><i class="<?php _ec( $config['icon'] )?>" style="color: <?php _ec( $config['color'] )?>"></i> <?php _e("Re-connect with Linkedin")?></a>
                     </div>
                 </div>

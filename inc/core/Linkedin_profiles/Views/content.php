@@ -63,7 +63,7 @@
 					            <img class="mh-190 mb-4" alt="" src="<?php _e( get_theme_url() ) ?>Assets/img/empty2.png">
 					            <div>
 					            	<a class="btn btn-primary btn-sm b-r-30" href="<?php _e( base_url($config['id'].'/oauth') )?>" >
-		                            	<i class="fad fa-plus"></i> <?php _e("Add account")?>
+		                            	<i class="fad fa-plus"></i> <?php _ec("Add account")?>
 		                            </a>
 					            </div>
 					        </div>

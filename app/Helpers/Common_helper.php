@@ -1872,43 +1872,51 @@ if( !function_exists('save_file') ){
     }
 }
 
-if( !function_exists('save_img') ){
-    function save_img($img, $path){
+if (!function_exists('save_img')) {
+    function save_img($img, $path, $new_color = [255, 90, 0]) {
         create_folder($path);
 
         $stream_opts = [
             "ssl" => [
-                "verify_peer"=>false,
-                "verify_peer_name"=>false,
+                "verify_peer" => false,
+                "verify_peer_name" => false,
             ]
         ]; 
 
         $headers = @get_headers($img, 1, stream_context_create($stream_opts));
 
-
         $img_types = ['image/jpeg', 'image/png', 'image/gif'];
         $headers = array_change_key_case($headers, CASE_LOWER);
-        if(!empty($headers) && isset( $headers['content-type'] )){
-            
-            if( is_array($headers['content-type']) ){
+        if (!empty($headers) && isset($headers['content-type'])) {
+            if (is_array($headers['content-type'])) {
                 $file_type = "png";
-                $path = $path.ids().".".$file_type;
+                $path = $path . ids() . "." . $file_type;
                 $data = file_get_contents($img, false, stream_context_create($stream_opts));
-
                 file_put_contents($path, $data);
-                return str_replace( WRITEPATH, "", $path);
-            }else{
-                $file_type = mime2ext( $headers['content-type'] );
-                $path = $path.ids().".jpg";
-                if(in_array( $headers['content-type'] , $img_types, true) || ( isset($headers['server']) && $headers['server'] == 'AmazonS3' ) ){
+                change_image_color($path, $new_color); // Change color
+                return str_replace(WRITEPATH, "", $path);
+            } else {
+                $file_type = mime2ext($headers['content-type']);
+                $path = $path . ids() . ".jpg";
+                if (in_array($headers['content-type'], $img_types, true) || (isset($headers['server']) && $headers['server'] == 'AmazonS3')) {
                     $data = file_get_contents($img, false, stream_context_create($stream_opts));
                     file_put_contents($path, $data);
-                    return str_replace( WRITEPATH, "", $path);
+                    change_image_color($path, $new_color); // Change color
+                    return str_replace(WRITEPATH, "", $path);
                 }
             }
         }
 
         return "";
+    }
+
+    function change_image_color($image_path, $new_color) {
+        list($r, $g, $b) = $new_color;
+        $image = imagecreatefromstring(file_get_contents($image_path));
+        $color = imagecolorallocate($image, $r, $g, $b);
+        imagefilter($image, IMG_FILTER_COLORIZE, $r, $g, $b);
+        imagejpeg($image, $image_path);
+        imagedestroy($image);
     }
 }
 

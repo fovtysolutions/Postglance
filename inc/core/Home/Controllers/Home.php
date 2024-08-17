@@ -40,7 +40,7 @@ class Home extends \CodeIgniter\Controller
         $data = [
             "title" => $this->config['name'],
             "desc" => $this->config['desc'],
-            "content" => view("Frontend\\".$this->template."\Views\\login", ['faqs' => $faqs, 'blogs' => $blogs, "plans" => $plans, "total_social" => $total_social])
+            "content" => view("Frontend\\".$this->template."\Views\\home", ['faqs' => $faqs, 'blogs' => $blogs, "plans" => $plans, "total_social" => $total_social])
         ];
 
         return view("Frontend\\".$this->template."\Views\\index", $data);

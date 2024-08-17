@@ -29,9 +29,7 @@
   'Enter tags' => 'Enter tags',
   'Success' => 'Success',
   'Planning and Scheduling' => 'Planning and Scheduling',
-  '%s scheduling & report' => '%s scheduling & report',
   'Linkedin requires an image' => 'Linkedin requires an image',
   'Cannot find the image to upload' => 'Cannot find the image to upload',
-  'Customize system interface' => 'Customize system interface',
   'Linkedin' => 'Linkedin',
 );

@@ -295,4 +295,3 @@ if(!class_exists('LinkedIn')){
         }
     }
 }
-

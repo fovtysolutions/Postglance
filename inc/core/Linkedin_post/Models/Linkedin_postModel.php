@@ -6,6 +6,7 @@ class Linkedin_postModel extends Model
 {
 	public function __construct(){
         $this->config = include realpath( __DIR__."/../Config.php" );
+        include get_module_dir( __DIR__ , 'Libraries/vendor/autoload.php');
         include get_module_dir( __DIR__ , 'Libraries/LinkedIn.php');
     
         $app_id = get_option('linkedin_api_key', '');
@@ -30,7 +31,7 @@ class Linkedin_postModel extends Model
             "items" => [
                 [
                     "id" => $this->config['id'],
-                    "name" => sprintf(__("%s scheduling & report"), $this->config['name']),
+                    "name" => sprintf("%s scheduling & report", $this->config['name']),
                 ]
             ]
         ];

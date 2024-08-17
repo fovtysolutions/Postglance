@@ -1,0 +1,18 @@
+<?php return array (
+  'WhatsApp API Configuration' => 'WhatsApp API Configuration',
+  'WhatsApp Server URL' => 'WhatsApp Server URL',
+  'You can only add up to %s Whatsapp profiles' => 'You can only add up to %s Whatsapp profiles',
+  'Add Whatsapp profiles' => 'Add Whatsapp profiles',
+  'Instance ID:' => 'Instance ID:',
+  'Scan the QR Code on your Whatsapp app' => 'Scan the QR Code on your Whatsapp app',
+  'Limit number of accounts' => 'Limit number of accounts',
+  'Relogin' => 'Relogin',
+  'If you don\'t see your profiles above, you might try to reconnec, re-accept all permissions, and ensure that you\'re logged in to the correct profile.' => 'If you don\'t see your profiles above, you might try to reconnec, re-accept all permissions, and ensure that you\'re logged in to the correct profile.',
+  'Re-connect with Whatsapp' => 'Re-connect with Whatsapp',
+  'Are you sure to delete this items?' => 'Are you sure to delete this items?',
+  'Search' => 'Search',
+  'Please select an item to delete' => 'Please select an item to delete',
+  'Success' => 'Success',
+  'Unsuccess' => 'Unsuccess',
+  'Whatsapp profiles' => 'Whatsapp profiles',
+);
