@@ -6,7 +6,7 @@ return [
     'author' => 'Stackcode',
     'author_uri' => 'https://stackposts.com',
     'desc' => 'Customize system interface',
-    'icon' => 'fad fa-folders',
+    'icon' => 'fa fa-folder-open',
     'color' => '#5156ff',
     'menu' => [
         'tab' => 3,

@@ -6,7 +6,7 @@ return [
     'author' => 'Stackcode',
     'author_uri' => 'https://stackposts.com',
     'desc' => 'Customize system interface',
-    'icon' => 'fad fa-calendar-alt',
+    'icon' => 'far fa-calendar-alt',
     'color' => '#c300e7',
     'menu' => [
         'tab' => 3,
