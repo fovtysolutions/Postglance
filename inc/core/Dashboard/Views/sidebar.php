@@ -1,21 +1,78 @@
-<div class="sub-sidebar bg-white d-flex flex-column flex-row-auto">
-    <div class="d-flex mb-10 p-20">
-        <div class="d-flex align-items-center w-lg-400px">
-            <form class="w-100 position-relative ">
-                <div class="input-group sp-input-group">
-                  <span class="input-group-text bg-light border-0 fs-20 bg-gray-100 text-gray-800" id="sub-menu-search"><i class="fad fa-search"></i></span>
-                  <input type="text" class="form-control form-control-solid ps-15 bg-light border-0" name="search" value="" placeholder="<?php _e("Search")?>" autocomplete="off">
-                </div>
-            </form>
-        </div>
-        <div class="flex-shrink-0 ms-2">
-            <a href="#" class="btn btn-icon btn-active-light-primary btn-bg-light">
-                <i class="fad fa-filter fs-15"></i>
-            </a>
-        </div>
-    </div>
 
-    <div class="d-flex mb-10 p-l-20 p-r-20 m-b-12">
-        <h2 class="text-gray-800 fw-bold"><?php _e( $title )?></h2>
+<head>
+    <style>
+        .dashboard-icon{
+	font-size: 24px;
+    color: #ff5c35;
+}
+.text-gray-600 {
+    color: var(--sp-text-gray-600) !important;
+   margin-left: 0rem !important; */
+   
+}
+.custom-hover-effect {
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.custom-hover-effect:hover {
+    background-color: rgba(255, 219, 193, 0.5); /* #FFDBC1 with 50% transparency */
+    border-radius: 5px; /* Optional: Add border-radius for smooth edges */
+}
+
+    </style>
+</head>
+
+<div class="sub-sidebar d-flex flex-column flex-row-auto" style="height: 100%;">
+
+    <div class="d-flex mb-10  p-l-10 p-r-20 m-b-12">
+    <div class="sidebar-nav sidebar-nav-one d-flex flex-column flex-column-fluid w-100 pt-lg-3 hide-x-scroll">
+            <ul class="nav flex-column">
+             <li class="nav-item mb-2 custom-hover-effect">
+                                <a href="<?=base_URL()?>/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
+                                <i class="fa fa-paper-plane dashboard-icon me-4" aria-hidden="true"></i>
+                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">Single Post</span>
+                                </a>
+                            </li>
+                           
+                          
+                            <li class="nav-item mb-2 custom-hover-effect">
+                                <a href="<?=base_URL()?>/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
+                                <i class="far fa-calendar-alt dashboard-icon me-4"></i>
+                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">Bulk Post</span>
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2 custom-hover-effect">
+                                <a href="<?=base_URL()?>/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
+                                <i class="bi bi-rocket-takeoff dashboard-icon me-4" aria-hidden="true"></i>
+                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">Calender</span>
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2 custom-hover-effect">
+                                <a href="<?=base_URL()?>/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
+                                <i class="	fas fa-user-astronaut dashboard-icon me-4" style="font-size:21px"></i>
+                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">Draft</span>
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2 custom-hover-effect">
+                                <a href="<?=base_URL()?>/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
+                                <i class="fas fa-users dashboard-icon me-3"></i>
+                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">A/C Manager</span>
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2 custom-hover-effect">
+                                <a href="<?=base_URL()?>/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
+                                <i class="fab fa-firstdraft dashboard-icon me-4"></i>
+                                
+                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">File Manager</span>
+                                </a>
+                            </li>
+                           
+                            
+                     
+                        
+                            </ul>
+
+        </div>
     </div>
 </div>

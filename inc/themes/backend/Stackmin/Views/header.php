@@ -1,8 +1,8 @@
 <div class="header bg-white align-items-stretch">
     <div class="container-fluid d-flex align-items-stretch justify-content-between h-100">
         <div class="d-flex justify-content-between flex-lg-grow-1">
-            <div class="d-flex align-items-stretch ms-1 ms-lg-3">
-                <div class="d-flex align-items-stretch ms-2 ms-lg-3">
+            <div class="d-flex align-items-stretch">
+                <div class="d-flex align-items-stretch">
                     <div class="d-flex align-items-center">
                         <div class="d-lg-none d-md-none d-sm-block d-xs-block d-block">
                             <a href="javascript:void(0);" class="btn btn-light-primary px-3 btn-open-sidebar">

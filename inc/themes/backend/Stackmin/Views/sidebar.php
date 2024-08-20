@@ -1,29 +1,19 @@
 
 <head>
     <style>
-        .custom-border-hover {
+ 
+ .custom-border-hover {
     position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.custom-border-hover::before {
-    content: '';
-    position: absolute;
-    top:50%;
-    left: 0;
-    height: 100%;
-    width: 4px;
-    background-color: #fff; /* Customize the color as needed */
-    opacity: 0;
-    transform: translateY(-50%) scaleY(0);
+.custom-border-hover:hover {
+    background-color: white;
    
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-    transform-origin: center;
-    border-radius: 2px;
 }
 
-.custom-border-hover:hover::before {
-    opacity: 1;
-    transform: translateY(-50%) scaleY(1);
+.custom-border-hover:hover i {
+    color: #ff5c35; /* Blue color for the icon */
 }
     </style>
 </head>

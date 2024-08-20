@@ -41,6 +41,7 @@
 	        <div id="post_by_status_total_chart" class="h-120 b-0 w-100"></div>
         </div>
     </div>
+	
 </div>
 
 <div class="card b-r-6 mb-4 border">

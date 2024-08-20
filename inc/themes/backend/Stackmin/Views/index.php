@@ -52,7 +52,7 @@
 
         <div class="d-flex h-100">
         <?php _ec( $this->include('Backend\Stackmin\Views\sidebar'), false )?>
-        <?php _ec( $this->include('Backend\Stackmin\Views\secondsidebar'), false )?>
+        <?php //_ec( $this->include('Backend\Stackmin\Views\secondsidebar'), false )?>
             <?php _ec( $this->renderSection('content'), false )?>
         </div>
 
