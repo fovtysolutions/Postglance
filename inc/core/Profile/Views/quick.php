@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		<div class="col-md-8 mb-4">
-			<div class="card b-r-15 b-r-15 p-20 border">
+			<div class="card b-r-15 b-r-15 p-24 border">
 				<div class="card-body d-flex no-update w-100 p-5">
 					<?php if (!empty($result)): ?>
 						

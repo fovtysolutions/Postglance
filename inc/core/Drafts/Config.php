@@ -6,7 +6,7 @@ return [
     'author' => 'Stackcode',
     'author_uri' => 'https://stackposts.com',
     'desc' => 'Customize system interface',
-    'icon' => 'fab fa-firstdraft',
+    'icon' => 'bi bi-file-earmark-bar-graph',
     'color' => '#00cccb',
     'menu' => [
         'tab' => 3,

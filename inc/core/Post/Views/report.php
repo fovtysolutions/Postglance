@@ -1,5 +1,5 @@
 <div class="row mb-5">
-	<div class="col-md-3">
+	<div class="col-md-4">
 	<form class="actionForm" action="<?php _e( base_url("post/report/".uri("segment", 4)) )?>" method="POST" data-result="html" data-content="insights" date-redirect="false" data-loading="false">
 	    <div class="card mb-4 bg-white px-4 shadow-none border b-r-10">
 	        <div class="card-header px-0 border-bottom-0">
@@ -25,7 +25,7 @@
 	    </div>
 	</form>
 	</div>
-	<div class="col-md-9">
+	<div class="col-md-8">
 	<div class="insights">
 		<?php _ec( $this->include('Core\Post\Views\loading'), false);?>
 	</div>

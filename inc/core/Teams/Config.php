@@ -6,7 +6,7 @@ return [
     'author' => 'Stackcode',
     'author_uri' => 'https://stackposts.com',
     'desc' => 'Stackposts - Social Media Management & Analysis Platform',
-    'icon' => 'fas fa-users',
+    'icon' => 'bi bi-microsoft-teams',
     'color' => '#2196f3',
     'menu' => [
         'tab' => 4,

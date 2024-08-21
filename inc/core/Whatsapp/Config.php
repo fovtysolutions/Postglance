@@ -6,7 +6,7 @@ return [
     'author' => 'Stackcode',
     'author_uri' => 'https://stackposts.com',
     'desc' => 'Customize system interface',
-    'icon' => 'fab fa-whatsapp',
+    'icon' => 'bi bi-whatsapp',
     'color' => '#25d366',
     'parent' => [
         "id" => "features",

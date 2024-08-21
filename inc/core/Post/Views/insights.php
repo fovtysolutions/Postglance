@@ -1,33 +1,34 @@
 <div class="row">
-	<div class="col mb-4">
+	
+	<div class="col-md-4 mb-4">
         <div class="border rounded b-r-10 bg-white position-relative">
             <div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
-            	<div class="bg-light-success w-60 h-60 text-success m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
+            	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
                 	<i class="fad fa-badge-check"></i>
             	</div>
             	<div class="flex-grow-1 ms-3">
-            		<div class=""><span class="fs-28 fw-9 text-success me-1"><?php _ec( short_number($total_succeed) )?></span> <span class="fw-6 text-gray-700"><?php _e("Succeed")?></span></div>
+            		<div class=""><span class="fs-28 fw-9 text-primary me-1"><?php _ec( short_number($total_succeed) )?></span> <span class="fw-6 text-gray-700"><?php _e("Succeed")?></span></div>
             		<div class="fs-12 fw-5 text-gray-400"><?php _e( date_show( $daterange[0] ) . " - " . date_show( $daterange[1] ) )?></div>
             	</div>
             </div>
             <div id="post_by_status_succeed_chart" class="h-120 b-0 w-100"></div>
         </div>
     </div>
-    <div class="col mb-4">
+    <div class="col-md-4 mb-4">
         <div class="border rounded b-r-10 bg-white position-relative">
         	<div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
-            	<div class="bg-light-danger w-60 h-60 text-danger m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
+            	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
                 	<i class="fad fa-exclamation"></i>
             	</div>
             	<div class="flex-grow-1 ms-3">
-            		<div class=""><span class="fs-28 fw-9 text-danger me-1"><?php _ec( short_number($total_failed) )?></span> <span class="fw-6 text-gray-700"><?php _e("Failed")?></span></div>
+            		<div class=""><span class="fs-28 fw-9 text-primary me-1"><?php _ec( short_number($total_failed) )?></span> <span class="fw-6 text-gray-700"><?php _e("Failed")?></span></div>
             		<div class="fs-12 fw-5 text-gray-400"><?php _e( date_show( $daterange[0] ) . " - " . date_show( $daterange[1] ) )?></div>
             	</div>
             </div>
             <div id="post_by_status_failed_chart" class="h-120 b-0 w-100"></div>
         </div>
     </div>
-    <div class="col mb-4">
+    <div class="col-md-4 mb-4">
         <div class="border rounded b-r-10 bg-white position-relative">
         	<div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
             	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
