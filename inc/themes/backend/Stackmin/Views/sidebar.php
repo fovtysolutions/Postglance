@@ -15,6 +15,9 @@
 .custom-border-hover:hover i {
     color: #ff5c35; /* Blue color for the icon */
 }
+.text{
+    color:#ff5c35;
+}
     </style>
 </head>
 
@@ -44,11 +47,13 @@
                 <?php foreach ($top_sidebar as $key => $menus): ?>
                     <?php foreach ($menus as $key => $row): ?>
                         <?php if( ! isset( $row['sub_menu'] ) ){?>
-                            <li class="nav-item  custom-border-hover" style="border-bottom:1px solid rgba(255,255,255, 0.5)">
-                                <a href="<?php _e( base_url( $row['id'] ) )?>" style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e( uri('segment', 1) == $row['id']?'active text-primary':'hoverable' )?>" <?php _ec( ( get_option("sidebar_type", "sidebar-small") == "sidebar-close"  )?'title="'.$row['name'].'" data-toggle="tooltip" data-placement="right"':'' )?> >
-                                    <i class="<?php _e( $row['icon'] )?> icon-color  fs-20"  ></i>
-                                </a>
-                            </li>
+                            <a href="<?php _e(base_url($row['id'])) ?>">
+    <li class="nav-item custom-border-hover <?php _e(uri('segment', 1) == $row['id'] ? 'bg-light' : '') ?>" style="border-bottom:1px solid rgba(255,255,255, 0.5)">
+        <p style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e(uri('segment', 1) == $row['id'] ? 'active text-primary' : 'hoverable') ?>" <?php _ec(get_option("sidebar_type", "sidebar-small") == "sidebar-close" ? 'title="' . $row['name'] . '" data-toggle="tooltip" data-placement="right"' : '') ?>>
+        <i class="<?php _e($row['icon']) ?> icon-color fs-20 <?php _e(uri('segment', 1) == $row['id'] ? 'text' : '') ?>"></i>
+        </p>
+    </li>
+</a>
                         <?php }else{?>
                             
                         <?php }?>

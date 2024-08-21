@@ -25,7 +25,7 @@
 
 <div class="sub-sidebar d-flex flex-column flex-row-auto" style="height: 100%;">
 
-    <div class="d-flex mb-10  p-l-10 p-r-20 m-b-12">
+    <div class="p-20 d-flex mb-10  p-l-10 p-r-20 m-b-12">
     <div class="sidebar-nav sidebar-nav-one d-flex flex-column flex-column-fluid w-100 pt-lg-0 hide-x-scroll">
             <ul class="nav flex-column">
              <li class="nav-item custom-hover-effect">

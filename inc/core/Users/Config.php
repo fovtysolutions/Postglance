@@ -6,7 +6,7 @@ return [
     'author' => 'Stackcode',
     'author_uri' => 'https://stackposts.com',
     'desc' => 'Configure your website',
-    'icon' => 'fad fa-users',
+    'icon' => 'bi bi-people-fill',
     'color' => '#009ef7',
     'role' => 1,
     'menu' => [

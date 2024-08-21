@@ -1,9 +1,9 @@
-<div class="sub-sidebar bg-white d-flex flex-column flex-row-auto">
+<div class="sub-sidebar d-flex flex-column flex-row-auto">
     <div class="d-flex mb-10 p-20">
         <div class="d-flex align-items-center w-lg-400px">
             <form class="w-100 position-relative ">
                 <div class="input-group sp-input-group">
-                  <span class="input-group-text bg-light border-0 fs-20 bg-gray-100 text-gray-800" id="sub-menu-search"><i class="fad fa-search"></i></span>
+                  <span class="input-group-text  border-0 fs-20  text-gray-800" id="sub-menu-search"><i class="fad fa-search"></i></span>
                   <input type="text" class="form-control form-control-solid ps-15 bg-light border-0 search-input" data-search="search-item" name="search" value="" placeholder="<?php _e("Search")?>" autocomplete="off">
                 </div>
             </form>
@@ -39,7 +39,7 @@
                     <div class="d-flex align-items-center mb-10 ">
                         <div class="symbol symbol-40px p-r-10">
                             <span class="symbol-label border bg-white">
-                                <i class="fad fa-key fs-18 text-danger"></i>
+                                <i class="fad fa-key fs-18 text-primary"></i>
                             </span>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                     <div class="d-flex align-items-center mb-10 ">
                         <div class="symbol symbol-40px p-r-10">
                             <span class="symbol-label border bg-white">
-                                <i class="fad fa-chart-pie align-self-center fs-18 text-success"></i>
+                                <i class="fad fa-chart-pie align-self-center fs-18 text-primary"></i>
                             </span>
                         </div>
                     </div>

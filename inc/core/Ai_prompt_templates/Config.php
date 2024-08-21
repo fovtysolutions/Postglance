@@ -6,7 +6,7 @@ return [
     'author' => 'Stackcode',
     'author_uri' => 'https://stackposts.com',
     'desc' => 'The smart and fast way to publish content to your social media automatically',
-    'icon' => 'fal fa-list-alt',
+    'icon' => 'bi bi-card-list',
     'color' => '#cb2b7a',
     'role' => 1,
     'menu' => [

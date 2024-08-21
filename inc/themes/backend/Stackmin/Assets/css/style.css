@@ -427,7 +427,9 @@ body.sidebar-dark .sidebar .nav-line{
 	.btn-open-sidebar{
 		display: block;
 	}
-
+    .imgg{
+		width:40px!important;
+	}
 	.sub-header{
 		display: block;
 		position: relative;

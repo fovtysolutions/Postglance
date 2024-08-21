@@ -44,21 +44,23 @@
     </div>
 	
 </div>
-
-<div class="card b-r-6 mb-4 border">
-	<div class="card-header">
-		<div class="card-title">
-			<?php _e("Report post by status")?>
+<div class="row">
+<div class="col-md-4 mb-4">
+	<div class="card b-r-6 mb-4 border">
+		<div class="card-header">
+			<div class="card-title">
+				<?php _e("Report post by status")?>
+			</div>
 		</div>
-	</div>
-	<div class="card-body">
-		<div id="post_by_status_chart"></div>
-		<h3 class="text-center"></h3>
+		<div class="card-body">
+			<div id="post_by_status_chart"></div>
+			<h3 class="text-center"></h3>
+		</div>
 	</div>
 </div>
 
-<div class="row">
-	<div class="col-md-6 mb-4">
+
+	<div class="col-md-4 mb-4">
 	    <div class="card h-100 mb-4 border">
 	        <div class="card-header">
 	            <div class="card-title">
@@ -95,7 +97,7 @@
 	    </div>
 	</div>
 
-	<div class="col-md-6 mb-4">
+	<div class="col-md-4 mb-4">
 	    <div class="card h-100 mb-4 border">
 	        <div class="card-header">
 	            <div class="card-title">
