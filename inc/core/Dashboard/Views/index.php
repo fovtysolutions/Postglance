@@ -2,11 +2,10 @@
 $request = \Config\Services::request();
 if ( !$request->isAJAX() ) {
 ?>
-    <?php 
-     _e( $this->extend('Backend\Stackmin\Views\index'), false);
+    <?php _e( $this->extend('Backend\Stackmin\Views\index'), false);
     ?>
-
     <?php echo $this->section('content') ?>
+    <?php _ec( $this->include('Core\Dashboard\Views\sidebar'), false);?>
     <div class="main-wrapper flex-grow-1 n-scroll <?php _ec( $config['id']."-main" )?>">
         <?php if (!check_expiration_date()): ?>
         <div class="container pt-5">

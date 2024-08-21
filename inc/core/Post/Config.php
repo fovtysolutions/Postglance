@@ -6,7 +6,7 @@ return [
     'author' => 'Stackcode',
     'author_uri' => 'https://stackposts.com',
     'desc' => 'Customize system interface',
-    'icon' => 'fas fa-paper-plane',
+    'icon' => 'bi bi-send-check-fill',
     'color' => '#ff0000',
     'menu' => [
         'tab' => 1,

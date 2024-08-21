@@ -7,7 +7,7 @@ if ( !$request->isAJAX() ) {
     ?>
 
     <?php echo $this->section('content') ?>
-
+    <?php _ec( $this->include('Core\Bulk_post\Views\sidebar'), false);?>
     <form class="main-wrapper flex-grow-1 n-scroll actionForm" action="<?php _e( get_module_url("save") )?>" method="POST">
         <?php echo $content ?>
     </form>

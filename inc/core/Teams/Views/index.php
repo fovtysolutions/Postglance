@@ -7,6 +7,7 @@ if ( !$request->isAJAX() ) {
     ?>
 
     <?php echo $this->section('content') ?>
+   
     <?php _e( $this->include('Core\Teams\Views\sidebar'), false);?>
 
     <div class="main-wrapper flex-grow-1 n-scroll">

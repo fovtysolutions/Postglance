@@ -1,29 +1,22 @@
 
 <head>
     <style>
-        .custom-border-hover {
+ 
+ .custom-border-hover {
     position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.custom-border-hover::before {
-    content: '';
-    position: absolute;
-    top:50%;
-    left: 0;
-    height: 100%;
-    width: 4px;
-    background-color: #fff; /* Customize the color as needed */
-    opacity: 0;
-    transform: translateY(-50%) scaleY(0);
+.custom-border-hover:hover {
+    background-color: white;
    
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-    transform-origin: center;
-    border-radius: 2px;
 }
 
-.custom-border-hover:hover::before {
-    opacity: 1;
-    transform: translateY(-50%) scaleY(1);
+.custom-border-hover:hover i {
+    color: #ff5c35; /* Blue color for the icon */
+}
+.text{
+    color:#ff5c35;
 }
     </style>
 </head>
@@ -38,7 +31,7 @@
             </a>
         </div>
 
-        <div class="sidebar-nav sidebar-nav-one d-flex flex-column flex-column-fluid w-100 pt-lg-0 hide-x-scroll">
+        <div class="sidebar-nav sidebar-nav-one d-flex flex-column flex-column-fluid w-100 pt-lg-0 n-scroll">
             <ul class="nav flex-column">
                 <?php 
                 $request = \Config\Services::request();
@@ -54,11 +47,13 @@
                 <?php foreach ($top_sidebar as $key => $menus): ?>
                     <?php foreach ($menus as $key => $row): ?>
                         <?php if( ! isset( $row['sub_menu'] ) ){?>
-                            <li class="nav-item mb-1 mt-2 custom-border-hover">
-                                <a href="<?php _e( base_url( $row['id'] ) )?>" style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e( uri('segment', 1) == $row['id']?'active text-primary':'hoverable' )?>" <?php _ec( ( get_option("sidebar_type", "sidebar-small") == "sidebar-close"  )?'title="'.$row['name'].'" data-toggle="tooltip" data-placement="right"':'' )?> >
-                                    <i class="<?php _e( $row['icon'] )?> icon-color  fs-20"  ></i>
-                                </a>
-                            </li>
+                            <a href="<?php _e(base_url($row['id'])) ?>">
+    <li class="nav-item custom-border-hover <?php _e(uri('segment', 1) == $row['id'] ? 'bg-light' : '') ?>" style="border-bottom:1px solid rgba(255,255,255, 0.5)">
+        <p style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e(uri('segment', 1) == $row['id'] ? 'active text-primary' : 'hoverable') ?>" <?php _ec(get_option("sidebar_type", "sidebar-small") == "sidebar-close" ? 'title="' . $row['name'] . '" data-toggle="tooltip" data-placement="right"' : '') ?>>
+        <i class="<?php _e($row['icon']) ?> icon-color fs-20 <?php _e(uri('segment', 1) == $row['id'] ? 'text' : '') ?>"></i>
+        </p>
+    </li>
+</a>
                         <?php }else{?>
                             
                         <?php }?>

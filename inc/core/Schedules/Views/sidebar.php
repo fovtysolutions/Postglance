@@ -1,4 +1,4 @@
-<div class="sub-sidebar bg-white d-flex flex-column flex-row-auto">
+<div class="sub-sidebar  d-flex flex-column flex-row-auto" style="height:100%">
     <input type="hidden" name="query_id" value="<?php _e( post("query_id") )?>">
     <input type="hidden" name="schedule_time" value="<?php _e( uri('segment', 6) )?>">
 
@@ -6,7 +6,7 @@
         <div class="d-flex align-items-center w-lg-400px">
             <form class="w-100 position-relative ">
                 <div class="input-group sp-input-group">
-                  <span class="input-group-text bg-light border-0 fs-20 bg-gray-100 text-gray-800" id="sub-menu-search"><i class="fad fa-search"></i></span>
+                  <span class="input-group-text border-0 fs-20 text-gray-800" id="sub-menu-search"><i class="fad fa-search"></i></span>
                   <input type="text" class="form-control form-control-solid ps-15 bg-light border-0 search-input" data-search="search-area" name="search" value="" placeholder="<?php _e("Search")?>" autocomplete="off">
                 </div>
             </form>

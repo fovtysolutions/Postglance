@@ -1,10 +1,11 @@
-<div class="sub-sidebar bg-white d-flex flex-column flex-row-auto">
+
+<div class="sub-sidebar d-flex flex-column flex-row-auto" style="height:100%">
     <div class="d-flex mb-10 p-20">
         <div class="d-flex align-items-center w-lg-400px">
             <form class="w-100 position-relative ">
                 <div class="input-group sp-input-group">
-                  <span class="input-group-text bg-light border-0 fs-20 bg-gray-100 text-gray-800" id="sub-menu-search"><i class="fad fa-search"></i></span>
-                  <input type="text" class="form-control form-control-solid ps-15 bg-light border-0 search-input" data-search="group-item" name="search" value="" placeholder="<?php _e("Search")?>" autocomplete="off">
+                  <span class="input-group-text  border-0 fs-20  text-gray-800" id="sub-menu-search"><i class="fad fa-search"></i></span>
+                  <input type="text" class="form-control form-control-solid ps-15  border-0 search-input" data-search="group-item" name="search" value="" placeholder="<?php _e("Search")?>" autocomplete="off">
                 </div>
             </form>
         </div>
@@ -59,7 +60,7 @@
                                 <div class="d-flex align-items-center mb-10 ">
                                     <div class="symbol symbol-40px p-r-10">
                                         <span class="symbol-label border bg-white">
-                                            <i class="<?php _ec($value['config']['icon'])?> pe-0 fs-20" style="color: <?php _ec($value['config']['color'])?>"></i>
+                                            <i class="<?php _ec($value['config']['icon'])?> pe-0 fs-20" style="color: #ff5c35"></i>
                                         </span>
                                     </div>
                                 </div>

@@ -8,7 +8,7 @@
 .text-gray-600 {
     color: var(--sp-text-gray-600) !important;
    margin-left: 0rem !important; */
-    font-size: 1.17rem;
+  
 }
 .custom-hover-effect {
     position: relative;
@@ -23,7 +23,7 @@
     </style>
 </head>
 
-<div class="sub-sidebar d-flex flex-column flex-row-auto" style="height: calc(100% - 65px);">
+<div class="sub-sidebar d-flex flex-column flex-row-auto" style="height: 100%;">
 
     <div class="d-flex mb-10  p-l-10 p-r-20 m-b-12">
     <div class="sidebar-nav sidebar-nav-one d-flex flex-column flex-column-fluid w-100 pt-lg-3 hide-x-scroll">

@@ -7,6 +7,7 @@ if ( !$request->isAJAX() ) {
     ?>
 
     <?php echo $this->section('content') ?>
+    <?php _ec( $this->include('Core\Bulk_post\Views\sidebar'), false);?>
     <div class="main-wrapper flex-grow-1 n-scroll <?php _ec( $config['id']."-main" )?>">
         <?php echo $content ?>
     </div>
