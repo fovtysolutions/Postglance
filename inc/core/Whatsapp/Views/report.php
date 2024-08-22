@@ -1,11 +1,25 @@
+<head>
+	<style>
+		.card-custom {
+    width: 100%; /* Fixed width */
+    height: 180px; /* Adjust the height based on content */
+    max-width: 100%; /* Prevent overflow on smaller screens */
+    box-sizing: border-box; /* Ensure padding and border are included in the width/height */
+}
+.card-custom .card-header {
+    padding: 15px; /* Adjust the padding to your needs */
+    box-sizing: border-box;
+}
+	</style>
+</head>
 <div class="col-md-12">
-	<h2 class="mb-5">
+	<h2 class="mb-5 text-center">
         <span class="me-2"><i class="<?php _ec( $config['icon'] )?> me-2" style="color: <?php _ec($config['color'])?>;"></i> <?php _e("WhatsApp report")?></span>
     </h2>
 	<div class="row">
-	    <div class="col-md-6">
-	    	<div class="card card-custom card-custom-primary mb-4">
-	    		<div class="card-header">
+	    <div class="col-md-4">
+	    	<div class="card card-custom card-custom-primary mb-4" style="background-image: linear-gradient(62deg, #FF5C35 0%, #FFD0C5 100%);">
+	    		<div class="">
 	    			<?php
 	    			$sent_by_month = $wa_total_sent_by_month;
 	    			$limit_sent_by_month = (int)permission("whatsapp_message_per_month");
@@ -31,7 +45,7 @@
 	    			}
 	    			?>
 
-	    			<div class="px-3 p-t-18 p-b-18 b-r-10 w-100">
+	    			<div class="px-3 p-t-25 p-b-25 b-r-10 w-100">
 						<div class="d-flex justify-content-between mb-2">
 							<div>
 								<div class="fs-16 fw-6 text-white"><?php _e("Message by month")?></div>
@@ -50,26 +64,16 @@
 	    		</div>
 	    	</div>
 	    </div>
-	    <div class="col-md-6">
+		<div class="col-md-8">
 			<div class="card border b-r-10 mb-4">
-				<div class="card-body">
-					<div class="fw-9 fs-40 text-primary position-absolute t-10 r-10 opacity-20"><i class="fad fa-user-plus"></i></div>
-					<div class="fs-14 text-gray-600"><?php _e("Total message sent")?></div>
-					<div class="fw-9 fs-30 text-primary d-flex"><span class="me-1"><?php _ec( short_number( $wa_total_sent ) )?></span> <span class="fs-14 fw-4 d-flex align-items-center mt-2"><?php _e("Messages")?></span></div>
-				</div>
-			</div>
-	    </div>
-
-	    <div class="col-md-12">
-			<div class="card border b-r-10 mb-4">
-				<div class="card-header">
+				<!-- <div class="card-header">
 					<div class="card-title">
 						<?php _e("Bulk messaging")?>
 					</div>
-				</div>
+				</div> -->
 				<div class="card-body">
 					<div class="row">
-						<div class="col-md-4 mb-4">
+						<div class="col-md-4">
 							<div class="card border b-r-10">
 								<div class="card-body">
 									<div class="fw-9 fs-40 text-primary position-absolute t-10 r-10 opacity-20"><i class="fad fa-calendar-check"></i></div>
@@ -78,7 +82,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 mb-4">
+						<div class="col-md-4">
 							<div class="card border b-r-10">
 								<div class="card-body">
 									<div class="fw-9 fs-40 text-success position-absolute t-10 r-10 opacity-20"><i class="fad fa-paper-plane"></i></div>
@@ -87,7 +91,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 mb-4">
+						<div class="col-md-4">
 							<div class="card border b-r-10">
 								<div class="card-body">
 									<div class="fw-9 fs-40 text-danger position-absolute t-10 r-10 opacity-20"><i class="fad fa-exclamation-triangle"></i></div>
@@ -123,14 +127,34 @@
 				</div>
 			</div>
 	    </div>
-
-	    <div class="col-md-12">
+	     <div class="col-md-4">
 			<div class="card border b-r-10 mb-4">
-				<div class="card-header">
+			<div class="card-body">
+			        <div class="row">
+						<div class="col-md-12 mb-4">
+							<div class="card border b-r-10">
+				<div class="card-body">
+				
+					<div class="fw-9 fs-40 text-primary position-absolute t-10 r-10 opacity-20"><i class="fad fa-user-plus"></i></div>
+					<div class="fs-14 text-gray-600"><?php _e("Total message sent")?></div>
+					<div class="fw-9 fs-30 text-primary d-flex"><span class="me-1"><?php _ec( short_number( $wa_total_sent ) )?></span> <span class="fs-14 fw-4 d-flex align-items-center mt-2"><?php _e("Messages")?></span></div>
+					</div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+	    </div> 
+
+	    
+
+	    <div class="col-md-4">
+			<div class="card border b-r-10 mb-4">
+				<!-- <div class="card-header">
 					<div class="card-title">
 						<?php _e("Autoresponder")?>
 					</div>
-				</div>
+				</div> -->
 				<div class="card-body">
 					<div class="row">
 						<div class="col-md-12 mb-4">
@@ -170,13 +194,13 @@
 			</div>
 	    </div>
 
-	    <div class="col-md-12">
+	    <div class="col-md-4">
 			<div class="card border b-r-10 mb-4">
-				<div class="card-header">
+				<!-- <div class="card-header">
 					<div class="card-title">
 						<?php _e("Chatbot")?>
 					</div>
-				</div>
+				</div> -->
 				<div class="card-body">
 					<div class="row">
 						<div class="col-md-12 mb-4">

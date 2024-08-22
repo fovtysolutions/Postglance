@@ -1,41 +1,41 @@
 <div class="row" id="alldata">
 	<div class="col-md-4 mb-4">
-        <div class="border rounded b-r-10 bg-white position-relative">
+        <div class="border rounded b-r-10 position-relative" style="background-color: rgba(255, 219, 193, 0.5) !important">
             <div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
             	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
                 	<i class="fad fa-badge-check"></i>
             	</div>
             	<div class="flex-grow-1 ms-3">
             		<div class=""><span class="fs-28 fw-9 text-primary me-1">0</span> <span class="fw-6 text-gray-700">Succeed</span></div>
-            		<div class="fs-12 fw-5 text-gray-400">25-07-2024 - 21-08-2024</div>
+            		<div class="fs-12 fw-5 text-gray-400">26-07-2024 - 22-08-2024</div>
             	</div>
             </div>
             <div id="post_by_status_succeed_chart" class="h-120 b-0 w-100"></div>
         </div>
     </div>
     <div class="col-md-4 mb-4">
-        <div class="border rounded b-r-10 bg-white position-relative">
+        <div class="border rounded b-r-10 position-relative" style="background-color: rgba(255, 219, 193, 0.5) !important">
         	<div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
             	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
                 	<i class="fad fa-exclamation"></i>
             	</div>
             	<div class="flex-grow-1 ms-3">
             		<div class=""><span class="fs-28 fw-9 text-primary me-1">0</span> <span class="fw-6 text-gray-700">Failed</span></div>
-            		<div class="fs-12 fw-5 text-gray-400">25-07-2024 - 21-08-2024</div>
+            		<div class="fs-12 fw-5 text-gray-400">26-07-2024 - 22-08-2024</div>
             	</div>
             </div>
             <div id="post_by_status_failed_chart" class="h-120 b-0 w-100"></div>
         </div>
     </div>
     <div class="col-md-4 mb-4">
-        <div class="border rounded b-r-10 bg-white position-relative">
+        <div class="border rounded b-r-10 position-relative" style="background-color: rgba(255, 219, 193, 0.5) !important">
         	<div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
             	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
                 	<i class="fad fa-calendar-check"></i>
             	</div>
             	<div class="flex-grow-1 ms-3">
             		<div class=""><span class="fs-28 fw-9 text-primary me-1">0</span> <span class="fw-6 text-gray-700">Total</span></div>
-            		<div class="fs-12 fw-5 text-gray-400">25-07-2024 - 21-08-2024</div>
+            		<div class="fs-12 fw-5 text-gray-400">26-07-2024 - 22-08-2024</div>
             	</div>
             </div>
 	        <div id="post_by_status_total_chart" class="h-120 b-0 w-100"></div>
@@ -44,7 +44,7 @@
 </div>
 <div class="row">
 	<div class="col-md-4 mb-4">
-		<div class="card b-r-6 mb-4 border">
+		<div class="card b-r-6 mb-4 border" style="background-color: rgba(255, 219, 193, 0.5) !important">
 			<div class="card-header">
 				<div class="card-title">
 					Report post by status				</div>
@@ -56,7 +56,7 @@
 		</div>
 	</div>
 	<div class="col-md-4 mb-4">
-	    <div class="card h-100 mb-4 border">
+	    <div class="card h-100 mb-4 border" style="background-color: rgba(255, 219, 193, 0.5) !important">
 	        <div class="card-header">
 	            <div class="card-title">
 	                <span class="me-2">Report post by type</span>
@@ -92,7 +92,7 @@
 	    </div>
 	</div>
 	<div class="col-md-4 mb-4">
-	    <div class="card h-100 mb-4 border">
+	    <div class="card h-100 mb-4 border" style="background-color: rgba(255, 219, 193, 0.5) !important">
 	        <div class="card-header">
 	            <div class="card-title">
 	                <span class="me-2">Recent publications</span>
@@ -123,7 +123,7 @@
     $(function(){
     	Core.chart({
 	        id: 'post_by_status_succeed_chart',
-	        categories: ['Jul 25','Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21'],
+	        categories: ['Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22'],
 	        legend: false,
 	        stacking: false,
 	        xvisible: false,
@@ -166,7 +166,7 @@
 
 	    Core.chart({
 	        id: 'post_by_status_failed_chart',
-	        categories: ['Jul 25','Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21'],
+	        categories: ['Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22'],
 	        legend: false,
 	        stacking: false,
 	        xvisible: false,
@@ -209,7 +209,7 @@
 
 	    Core.chart({
 	        id: 'post_by_status_total_chart',
-	        categories: ['Jul 25','Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21'],
+	        categories: ['Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22'],
 	        legend: false,
 	        stacking: false,
 	        xvisible: false,
@@ -252,7 +252,7 @@
 
         Core.column_chart({
 	        id: 'post_by_status_chart',
-	        categories: ['Jul 25','Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21'],
+	        categories: ['Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22'],
 	        legend: true,
 	        stacking: true,
 	        xvisible: true,

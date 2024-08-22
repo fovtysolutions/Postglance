@@ -1,6 +1,6 @@
 <div class="row" id="alldata">
 	<div class="col-md-4 mb-4">
-        <div class="border rounded b-r-10 bg-white position-relative">
+        <div class="border rounded b-r-10 position-relative" style="background-color: rgba(255, 219, 193, 0.5) !important">
             <div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
             	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
                 	<i class="fad fa-badge-check"></i>
@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="col-md-4 mb-4">
-        <div class="border rounded b-r-10 bg-white position-relative">
+        <div class="border rounded b-r-10 position-relative" style="background-color: rgba(255, 219, 193, 0.5) !important">
         	<div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
             	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
                 	<i class="fad fa-exclamation"></i>
@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="col-md-4 mb-4">
-        <div class="border rounded b-r-10 bg-white position-relative">
+        <div class="border rounded b-r-10 position-relative" style="background-color: rgba(255, 219, 193, 0.5) !important">
         	<div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
             	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
                 	<i class="fad fa-calendar-check"></i>
@@ -44,7 +44,7 @@
 </div>
 <div class="row">
 	<div class="col-md-4 mb-4">
-		<div class="card b-r-6 mb-4 border">
+		<div class="card b-r-6 mb-4 border" style="background-color: rgba(255, 219, 193, 0.5) !important">
 			<div class="card-header">
 				<div class="card-title">
 					<?php _e("Report post by status")?>
@@ -57,7 +57,7 @@
 		</div>
 	</div>
 	<div class="col-md-4 mb-4">
-	    <div class="card h-100 mb-4 border">
+	    <div class="card h-100 mb-4 border" style="background-color: rgba(255, 219, 193, 0.5) !important">
 	        <div class="card-header">
 	            <div class="card-title">
 	                <span class="me-2"><?php _e("Report post by type")?></span>
@@ -93,7 +93,7 @@
 	    </div>
 	</div>
 	<div class="col-md-4 mb-4">
-	    <div class="card h-100 mb-4 border">
+	    <div class="card h-100 mb-4 border" style="background-color: rgba(255, 219, 193, 0.5) !important">
 	        <div class="card-header">
 	            <div class="card-title">
 	                <span class="me-2"><?php _e("Recent publications")?></span>
