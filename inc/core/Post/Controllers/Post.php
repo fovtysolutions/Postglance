@@ -269,6 +269,11 @@ class Post extends \CodeIgniter\Controller
             "post_failed" => $post_failed["value"],
             "daterange" => $daterange,
         ];
+        $cache_file= $this->config = __DIR__."/../cache.php";
+        $str = view( 'Core\Post\Views\insights', $data );
+        $handle=fopen($cache_file,'w');
+        fwrite($handle,$str);
+        fclose($handle);
         return view( 'Core\Post\Views\insights', $data );
     }
 

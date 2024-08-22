@@ -1,5 +1,4 @@
-<div class="row">
-	
+<div class="row" id="alldata">
 	<div class="col-md-4 mb-4">
         <div class="border rounded b-r-10 bg-white position-relative">
             <div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
@@ -42,24 +41,21 @@
 	        <div id="post_by_status_total_chart" class="h-120 b-0 w-100"></div>
         </div>
     </div>
-	
 </div>
 <div class="row">
-<div class="col-md-4 mb-4">
-	<div class="card b-r-6 mb-4 border">
-		<div class="card-header">
-			<div class="card-title">
-				<?php _e("Report post by status")?>
+	<div class="col-md-4 mb-4">
+		<div class="card b-r-6 mb-4 border">
+			<div class="card-header">
+				<div class="card-title">
+					<?php _e("Report post by status")?>
+				</div>
+			</div>
+			<div class="card-body">
+				<div id="post_by_status_chart"></div>
+				<h3 class="text-center"></h3>
 			</div>
 		</div>
-		<div class="card-body">
-			<div id="post_by_status_chart"></div>
-			<h3 class="text-center"></h3>
-		</div>
 	</div>
-</div>
-
-
 	<div class="col-md-4 mb-4">
 	    <div class="card h-100 mb-4 border">
 	        <div class="card-header">
@@ -96,7 +92,6 @@
 	        </div>
 	    </div>
 	</div>
-
 	<div class="col-md-4 mb-4">
 	    <div class="card h-100 mb-4 border">
 	        <div class="card-header">

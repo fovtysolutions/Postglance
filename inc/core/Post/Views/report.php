@@ -25,8 +25,8 @@
 	    </div>
 	</form>
 	</div>
-	<div class="insights">
-		<?php _ec( $this->include('Core\Post\Views\loading'), false);?>
-	</div>
+    <?php include  __DIR__."/../cache.php" ;?>
 </div>
+
+
 
