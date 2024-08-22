@@ -430,6 +430,9 @@ body.sidebar-dark .sidebar .nav-line{
     .imgg{
 		width:40px!important;
 	}
+	.margin-bottom{
+		margin-bottom: 1.5rem !important;
+	}
 	.sub-header{
 		display: block;
 		position: relative;

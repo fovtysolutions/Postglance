@@ -1,4 +1,4 @@
-<div class="d-flex align-items-stretch ms-2 ms-lg-2">
+<div class="d-flex align-items-stretch ms-2 ms-lg-2" >
     <div class="d-flex align-items-center">
         <div class="dropdown dropdown-hide-arrow" data-dropdown-spacing="52.5">
             <a href="javascript:void(0);" class="dropdown-toggle d-block position-relative" data-toggle="dropdown" aria-expanded="true">

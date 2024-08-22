@@ -1,7 +1,7 @@
 <div class="container my-5">
     <div class="d-flex flex-column flex-row-auto h-100">
         <div class="bd-search position-relative me-auto">
-            <h1><i class="<?php _e( $config['icon'] )?>" style="color: <?php _e( $config['color'] )?>;" ></i> <?php _e( $config['name'] )?></h1>
+            <h1><i class="<?php _e( $config['icon'] )?>" style="color: #FF5C35" ></i> <?php _e( $config['name'] )?></h1>
         </div>
     </div>
 </div>

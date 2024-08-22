@@ -6,7 +6,7 @@
                     <span class="fm-btn-select-all"><i class="fad fa-check-double"></i> <?php _e("Select all")?></span>
                     <span class="fm-btn-deselect-all"><i class="fad fa-times"></i> <?php _e("Deselect All ")?></span>
                 </button>
-                <button type="button" class="btn btn-danger w-30 fm-delete-all"><i class="fad fa-trash-alt me-0 pe-0"></i></button>
+                <button type="button" class="btn btn-primary w-30 fm-delete-all"><i class="fad fa-trash-alt me-0 pe-0"></i></button>
             </div>
         </div>
         <div class="mb-4">
@@ -111,7 +111,7 @@
             <h3 class="mb-3 text-gray-800 fs-16"><i class="fad fa-filter"></i> <?php _e("Filter")?></h3>     
             
             <div class="input-group mb-2">
-                <span class="input-group-text bg-white px-3">
+                <span class="input-group-text  px-3">
                     <i class="fad fa-search"></i>
                 </span>
                 <input type="text" class="form-control ajax-filter fm-input-search fs-12 fw-4" name="keyword" placeholder="<?php _e("Enter keyword")?>">
@@ -125,7 +125,7 @@
                 <label class="fs-12"><?php _e("Media Type")?></label>
 
                 <div class="input-group">
-                    <span class="input-group-text bg-white px-3">
+                    <span class="input-group-text px-3">
                         <i class="fad fa-filter"></i>
                     </span>
                     <select class="form-control fs-12 fw-4 ajax-filter fm-input-filter" name="filter">

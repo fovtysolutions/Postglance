@@ -7,21 +7,21 @@
 				<label class="col-4 bg-primary text-light-primary" for="type_media">
 					<div class="d-block d-md-flex d-sm-flex text-center align-items-center flex-row-fluid flex-wrap">
 						<span class="icon p-r-10"><i class="fad fa-images"></i></span>
-						<span class="text"><?php _e("Media")?></span>
+						<span class=""><?php _e("Media")?></span>
 						<input id="type_media" type="radio" class="d-none" name="type" value="media" checked>
 					</div>
 				</label>
 				<label class="col-4" for="type_link">
 					<div class="d-block d-md-flex d-sm-flex text-center align-items-center flex-row-fluid flex-wrap">
 						<span class="icon p-r-10"><i class="fad fa-link"></i></span>
-						<span class="text"><?php _e("Link")?></span>
+						<span class=""><?php _e("Link")?></span>
 						<input id="type_link" type="radio" class="d-none" name="type" value="link">
 					</div>
 				</label>
 				<label class="col-4" for="type_text">
 					<div class="d-block d-md-flex d-sm-flex text-center align-items-center flex-row-fluid flex-wrap">
 						<span class="icon p-r-10"><i class="fad fa-align-center"></i></span>
-						<span class="text"><?php _e("Text")?></span>
+						<span class=""><?php _e("Text")?></span>
 						<input id="type_text" type="radio" class="d-none" name="type" value="text">
 					</div>
 				</label>

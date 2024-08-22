@@ -1,6 +1,6 @@
 <div class="container d-sm-flex align-items-md-center pt-4 align-items-center justify-content-center">
     <div class="bd-search position-relative me-auto">
-        <h2 class="mb-0 py-4 text-gray-800"> <i class="<?php _ec( $config['icon'] )?> me-2" style="color: <?php _ec( $config['color'] )?>;"></i> <?php _e($config['name'])?></h2>
+        <h2 class="mb-0 py-4 text-gray-800"> <i class="<?php _ec( $config['icon'] )?> me-2" style="color: #FF5B35;"></i> <?php _e($config['name'])?></h2>
     </div>
     <div class="">
         <div class="dropdown me-2">

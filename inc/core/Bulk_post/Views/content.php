@@ -1,7 +1,7 @@
 <form class="actionForm" action="<?php _ec( get_module_url("save") )?>" method="POST">
     <div class="container d-flex align-items-md-center justify-content-between pt-5  mw-800">
         <div class="bd-search position-relative me-auto">
-            <h1><i class="<?php _ec( $config['icon'] )?>" style="color: <?php _ec( $config['color'] )?>;" ></i> <?php _e( $config['name'] )?></h1>
+            <h1 ><i class="me-4 <?php _ec( $config['icon'] )?>" style="color: #FF5C35;" ></i> <?php _e( $config['name'] )?></h1>
             <span><?php _e( $config['desc'] )?></span>
         </div>
     </div>

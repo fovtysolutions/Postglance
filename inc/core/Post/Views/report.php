@@ -24,6 +24,7 @@
 	        </div>
 	    </div>
 	</form>
+	
 	</div>
 	<div class="insights">
 		<?php _ec( $this->include('Core\Post\Views\loading'), false);?>

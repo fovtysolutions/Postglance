@@ -6,7 +6,7 @@
     <div class="">
         <div class="me-2">
             <div class="input-group input-group-sm sp-input-group border b-r-4">
-                <span class="input-group-text border-0 fs-20 bg-gray-100 text-gray-800" id="sub-menu-search"><i class="fad fa-search"></i></span>
+                <span class="input-group-text border-0 fs-20" id="sub-menu-search"><i class="fad fa-search"></i></span>
                 <input type="text" class="ajax-pages-search ajax-filter form-control form-control-solid ps-15 border-0" name="keyword" value="" placeholder="<?php _e("Search")?>" autocomplete="off">
                 <a href="<?php _ec( get_module_url("index/update") )?>" class="btn btn-light btn-active-light-primary m-r-1 border-end" title="<?php _e("Add new")?>" data-toggle="tooltip" data-placement="top"><i class="fad fa-plus text-primary pe-0"></i></a>
 		        <div class="btn-group btn-group-sm" title="<?php _e("Assign proxy")?>" data-toggle="tooltip" data-placement="top">
