@@ -1,3 +1,8 @@
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="<?php _ec( get_frontend_url() )?>Assets/css/style1.css">
+	
+</head>
 <?php if (find_modules("payment")): ?>
 <div class="section pricing container m-b-120" id="pricing">
     
