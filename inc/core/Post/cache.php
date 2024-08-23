@@ -7,7 +7,7 @@
             	</div>
             	<div class="flex-grow-1 ms-3">
             		<div class=""><span class="fs-28 fw-9 text-primary me-1">0</span> <span class="fw-6 text-gray-700">Succeed</span></div>
-            		<div class="fs-12 fw-5 text-gray-400">26-07-2024 - 22-08-2024</div>
+            		<div class="fs-12 fw-5 text-gray-400">27-07-2024 - 23-08-2024</div>
             	</div>
             </div>
             <div id="post_by_status_succeed_chart" class="h-120 b-0 w-100"></div>
@@ -21,7 +21,7 @@
             	</div>
             	<div class="flex-grow-1 ms-3">
             		<div class=""><span class="fs-28 fw-9 text-primary me-1">0</span> <span class="fw-6 text-gray-700">Failed</span></div>
-            		<div class="fs-12 fw-5 text-gray-400">26-07-2024 - 22-08-2024</div>
+            		<div class="fs-12 fw-5 text-gray-400">27-07-2024 - 23-08-2024</div>
             	</div>
             </div>
             <div id="post_by_status_failed_chart" class="h-120 b-0 w-100"></div>
@@ -35,7 +35,7 @@
             	</div>
             	<div class="flex-grow-1 ms-3">
             		<div class=""><span class="fs-28 fw-9 text-primary me-1">0</span> <span class="fw-6 text-gray-700">Total</span></div>
-            		<div class="fs-12 fw-5 text-gray-400">26-07-2024 - 22-08-2024</div>
+            		<div class="fs-12 fw-5 text-gray-400">27-07-2024 - 23-08-2024</div>
             	</div>
             </div>
 	        <div id="post_by_status_total_chart" class="h-120 b-0 w-100"></div>
@@ -123,7 +123,7 @@
     $(function(){
     	Core.chart({
 	        id: 'post_by_status_succeed_chart',
-	        categories: ['Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22'],
+	        categories: ['Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22','Aug 23'],
 	        legend: false,
 	        stacking: false,
 	        xvisible: false,
@@ -166,7 +166,7 @@
 
 	    Core.chart({
 	        id: 'post_by_status_failed_chart',
-	        categories: ['Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22'],
+	        categories: ['Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22','Aug 23'],
 	        legend: false,
 	        stacking: false,
 	        xvisible: false,
@@ -209,7 +209,7 @@
 
 	    Core.chart({
 	        id: 'post_by_status_total_chart',
-	        categories: ['Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22'],
+	        categories: ['Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22','Aug 23'],
 	        legend: false,
 	        stacking: false,
 	        xvisible: false,
@@ -252,7 +252,7 @@
 
         Core.column_chart({
 	        id: 'post_by_status_chart',
-	        categories: ['Jul 26','Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22'],
+	        categories: ['Jul 27','Jul 28','Jul 29','Jul 30','Jul 31','Aug 1','Aug 2','Aug 3','Aug 4','Aug 5','Aug 6','Aug 7','Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14','Aug 15','Aug 16','Aug 17','Aug 18','Aug 19','Aug 20','Aug 21','Aug 22','Aug 23'],
 	        legend: true,
 	        stacking: true,
 	        xvisible: true,
