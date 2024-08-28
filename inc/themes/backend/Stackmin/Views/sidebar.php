@@ -48,12 +48,12 @@
                     <?php foreach ($menus as $key => $row): ?>
                         <?php if( ! isset( $row['sub_menu'] ) ){?>
                             <a href="<?php _e(base_url($row['id'])) ?>">
-    <li class="nav-item custom-border-hover <?php _e(uri('segment', 1) == $row['id'] ? 'bg-light' : '') ?>" style="border-bottom:1px solid rgba(255,255,255, 0.5)">
-        <p style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e(uri('segment', 1) == $row['id'] ? 'active text-primary' : 'hoverable') ?>" <?php _ec(get_option("sidebar_type", "sidebar-small") == "sidebar-close" ? 'title="' . $row['name'] . '" data-toggle="tooltip" data-placement="right"' : '') ?>>
-        <i class="<?php _e($row['icon']) ?> icon-color fs-20 <?php _e(uri('segment', 1) == $row['id'] ? 'text' : '') ?>"></i>
-        </p>
-    </li>
-</a>
+                                <li class="nav-item custom-border-hover <?php _e(uri('segment', 1) == $row['id'] ? 'bg-light' : '') ?>" style="border-bottom:1px solid rgba(255,255,255, 0.5)">
+                                    <p style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e(uri('segment', 1) == $row['id'] ? 'active text-primary' : 'hoverable') ?>" <?php _ec(get_option("sidebar_type", "sidebar-small") == "sidebar-close" ? 'title="' . $row['name'] . '" data-toggle="tooltip" data-placement="right"' : '') ?>>
+                                    <i class="<?php _e($row['icon']) ?> icon-color fs-20 <?php _e(uri('segment', 1) == $row['id'] ? 'text' : '') ?>"></i>
+                                    </p>
+                                </li>
+                            </a>
                         <?php }else{?>
                             
                         <?php }?>
@@ -63,22 +63,19 @@
         </div>
      
 
-        <div class="sidebar-footer d-flex flex-column-fluid mt-auto w-100 hide-x-scroll">
+        <div class="pt-0 sidebar-footer d-flex flex-column-fluid mt-auto w-100 hide-x-scroll" style="margin-bottom:4.5rem">
             <div class="nav flex-column overflow-hidden w-100">
-            <?php 
-                $bottom_sidebar = $request->bottom_sidebar; 
-                ?>
-
+            <?php $bottom_sidebar = $request->bottom_sidebar; ?>
                 <?php foreach ($bottom_sidebar as $key => $menus): ?>
-
                     <?php foreach ($menus as $key => $row): ?>
-                        
                         <?php if( ! isset( $row['sub_menu'] ) ){?>
-                            <div class="nav-item mb-3">
-                                <a href="<?php _e( base_url( $row['id'] ) )?>" style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e( uri('segment', 1) == $row['id']?'active text-primary':'hoverable' )?>" <?php _ec( ( get_option("sidebar_type", "sidebar-small") == "sidebar-close"  )?'title="'.$row['name'].'" data-toggle="tooltip" data-placement="right"':'' )?>>
-                                    <i class="<?php _e( $row['icon'] )?> icon-color fs-20"></i>
+                            <a href="<?php _e( base_url( $row['id'] ) )?>">
+                            <li class="nav-item custom-border-hover <?php _e(uri('segment', 1) == $row['id'] ? 'bg-light' : '') ?>" style="border-bottom:1px solid rgba(255,255,255, 0.5)">
+                                <p  style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e( uri('segment', 1) == $row['id']?'active text-primary':'hoverable' )?>" <?php _ec( ( get_option("sidebar_type", "sidebar-small") == "sidebar-close"  )?'title="'.$row['name'].'" data-toggle="tooltip" data-placement="right"':'' )?>>
+                                    <i class="<?php _e($row['icon']) ?> icon-color fs-20 <?php _e(uri('segment', 1) == $row['id'] ? 'text' : '') ?>"></i>
+                                </p>
+                                </li>
                                 </a>
-                            </div>
                         <?php }else{?>
 
                         <?php }?>
@@ -86,6 +83,7 @@
                     <?php endforeach ?>
                     <div class="menu-separator"></div>
                 <?php endforeach ?>
+                
             </div>
         </div>
 

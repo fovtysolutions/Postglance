@@ -3,7 +3,7 @@
         <div class="border rounded b-r-10 position-relative" style="background-color: rgba(255, 219, 193, 0.5) !important">
             <div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
             	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
-                	<i class="fad fa-badge-check"></i>
+				<img src="<?php _ec( get_module_path( __DIR__, "Assets/img/check.png" ) )?>" alt="instagram-check-mark"/>
             	</div>
             	<div class="flex-grow-1 ms-3">
             		<div class=""><span class="fs-28 fw-9 text-primary me-1"><?php _ec( short_number($total_succeed) )?></span> <span class="fw-6 text-gray-700"><?php _e("Succeed")?></span></div>
@@ -17,7 +17,7 @@
         <div class="border rounded b-r-10 position-relative" style="background-color: rgba(255, 219, 193, 0.5) !important">
         	<div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
             	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
-                	<i class="fad fa-exclamation"></i>
+				<img src="<?php _ec( get_module_path( __DIR__, "Assets/img/cross.png" ) )?>" alt="instagram-check-mark"/>
             	</div>
             	<div class="flex-grow-1 ms-3">
             		<div class=""><span class="fs-28 fw-9 text-primary me-1"><?php _ec( short_number($total_failed) )?></span> <span class="fw-6 text-gray-700"><?php _e("Failed")?></span></div>
@@ -31,7 +31,7 @@
         <div class="border rounded b-r-10 position-relative" style="background-color: rgba(255, 219, 193, 0.5) !important">
         	<div class="p-20 position-relative zIndex-2 p-b-0 d-flex">
             	<div class="bg-light-primary w-60 h-60 text-primary m-auto d-flex align-items-center justify-content-center fs-30 b-r-10">
-                	<i class="fad fa-calendar-check"></i>
+				<img src="<?php _ec( get_module_path( __DIR__, "Assets/img/graph.png" ) )?>" alt="instagram-check-mark"/>
             	</div>
             	<div class="flex-grow-1 ms-3">
             		<div class=""><span class="fs-28 fw-9 text-primary me-1"><?php _ec( short_number($total_post) )?></span> <span class="fw-6 text-gray-700"><?php _e("Total")?></span></div>

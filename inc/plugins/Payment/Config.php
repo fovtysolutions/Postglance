@@ -6,7 +6,7 @@ return [
     'author' => 'Stackcode',
     'author_uri' => 'https://stackposts.com',
     'desc' => 'Customize system interface',
-    'icon' => 'fad fa-credit-card',
+    'icon' => 'bi bi-credit-card-2-back',
     'color' => '#b3e200',
     'login_required' => false,
      'cron' => [

@@ -6,7 +6,7 @@ return [
     'author' => 'Stackcode',
     'author_uri' => 'https://stackposts.com',
     'desc' => 'Customize system interface',
-    'icon' => 'fad fa-plug',
+    'icon' => 'bi bi-plugin',
     'color' => '#1336b5',
     'role' => 1,
     'menu' => [
