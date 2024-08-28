@@ -1,4 +1,13 @@
-<div class="submenu-right fm-submenu d-flex flex-column flex-row-auto p-20 bg-white n-scroll">
+
+<head>
+    <style>
+        .main-wrapper {
+    margin-top: 65px;
+    
+}
+    </style>
+</head>
+<div class="submenu-right fm-submenu d-flex flex-column flex-row-auto p-20 n-scroll d-none d-md-block" style="background-color: #FEF4EA;">
     <div class="fm-options">
         <div class="mb-4">
             <div class="btn-group btn-group-sm w-100" role="group" aria-label="Basic example">

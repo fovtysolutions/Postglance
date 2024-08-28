@@ -1,24 +1,26 @@
+
+
 <div class="p-25 container">
 	<div class="row">
 
 		<div class="col-md-12 mb-4">
 			
 			<div class="row post-type">
-				<label class="col-4 bg-primary text-light-primary" for="type_media">
+				<label class="col-12 bg-primary text-light-primary" for="type_media" id="media">
 					<div class="d-block d-md-flex d-sm-flex text-center align-items-center flex-row-fluid flex-wrap">
 						<span class="icon p-r-10"><i class="fad fa-images"></i></span>
 						<span class=""><?php _e("Media")?></span>
 						<input id="type_media" type="radio" class="d-none" name="type" value="media" checked>
 					</div>
 				</label>
-				<label class="col-4" for="type_link">
+				<label class="col-12 bg-primary text-light-primary" for="type_link" id="link">
 					<div class="d-block d-md-flex d-sm-flex text-center align-items-center flex-row-fluid flex-wrap">
 						<span class="icon p-r-10"><i class="fad fa-link"></i></span>
 						<span class=""><?php _e("Link")?></span>
 						<input id="type_link" type="radio" class="d-none" name="type" value="link">
 					</div>
 				</label>
-				<label class="col-4" for="type_text">
+				<label class="col-12 bg-primary text-light-primary" for="type_text" id="text">
 					<div class="d-block d-md-flex d-sm-flex text-center align-items-center flex-row-fluid flex-wrap">
 						<span class="icon p-r-10"><i class="fad fa-align-center"></i></span>
 						<span class=""><?php _e("Text")?></span>
@@ -28,10 +30,10 @@
 			</div>
 		</div>
 		
-		<div class="post-tab filemanager-tab col-lg-4 col-md-6 col-sm-12 d-lg-block d-md-block d-sm-none d-xs-none d-none">
+		<div id="media-content"  class="post-tab filemanager-tab col-md-12">
 			<?php echo view_cell('\Core\File_manager\Controllers\File_manager::widget') ?>
 		</div>
-		<div class="post-tab post-content-tab col-lg-4 col-md-6 col-sm-12">
+		<div id="link-content" class="post-tab post-content-tab col-md-12">
 			<div class="card border h-100 post-schedule wrap-caption">
 				<div class="card-header p-r-20 p-l-20">
 					<h3 class="card-title"><?php _e("New post")?></h3>
@@ -259,7 +261,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="post-tab preview-tab col-md-4 d-lg-block d-md-none d-sm-none d-xs-none d-none">
+		<div id="text-content" class="post-tab preview-tab col-md-12">
 			<?php if(!empty($frame_posts)){?>
 
 			<?php 
@@ -273,7 +275,7 @@
 			?>
 
 			<?php if ($preview): ?>
-			<div class="card border">
+			<div class="card border" id="text-card-content">
 				<div class="card-header p-r-20 p-l-20 m-auto w-100">
 					<h3 class="card-title text-center"><?php _e("Network Preview")?></h3>
 					<div class="card-toolbar">
@@ -332,3 +334,4 @@
 	});
 </script>
 <?php }?>
+   

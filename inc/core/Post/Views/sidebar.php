@@ -1,78 +1,131 @@
 
 <head>
-    <style>
-        .dashboard-icon{
-	font-size: 20px;
-    color: #ff5c35;
-}
-.text-gray-600 {
-    color: var(--sp-text-gray-600) !important;
-   margin-left: 0rem !important; */
+<style>
+.sidebars {
+   
+    display: flex;
+    flex-direction: column;
+    margin-top:116px;
    
 }
-.custom-hover-effect {
-    position: relative;
-    transition: background-color 0.3s ease-in-out;
+
+.tab-button {
+    background-color: #f5f8fa;
+    color: #7E8299;
+    border: none;
+    padding: 14px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
 }
 
-.custom-hover-effect:hover {
-    background-color: rgba(255, 219, 193, 0.5); /* #FFDBC1 with 50% transparency */
-    border-radius: 5px; /* Optional: Add border-radius for smooth edges */
+.tab-button .icon {
+    margin-right: 10px;
+}
+
+.tab-button:hover {
+    background-color: rgba(255, 219, 193, 0.5);
+}
+
+.tab-button.active {
+    background-color: rgba(255, 219, 193, 0.5);
+}
+
+.tab-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+.sub-sidebar {
+    min-width: 4rem;
+     max-width: 4rem;
+   border-right: none; 
+     /* box-shadow: 0 0 80px 50px rgb(206 213 225 / 12%);   */
+    position: relative;
+    height: fit-content;
+    background-color: #f5f8fa;
+    
+}
+@media (max-width: 768px) {
+    .sub-sidebar {
+        position: absolute;
+    }
 }
 
     </style>
 </head>
 
-<div class="d-none sub-sidebar d-flex flex-column flex-row-auto" style="height: 100%;">
-
-    <div class="d-flex mb-10  p-l-10 p-r-20 m-b-12">
-    <div class="sidebar-nav sidebar-nav-one d-flex flex-column flex-column-fluid w-100 pt-lg-0 hide-x-scroll">
-            <ul class="nav flex-column">
-             <li class="nav-item custom-hover-effect">
-                                <a href="<?=base_URL()?>/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
-                                <i class="bi bi-send-check-fill dashboard-icon me-4" aria-hidden="true"></i>
-                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">Single Post</span>
-                                </a>
-                            </li>
-                           
-                          
-                            <li class="nav-item  custom-hover-effect">
-                                <a href="<?=base_URL()?>/dashboard"  class="nav-link d-flex p-t-12 p-b-8 active text-primary">
-                                <i class="bi bi-collection dashboard-icon me-4"></i>
-                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">Bulk Post</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  custom-hover-effect">
-                                <a href="<?=base_URL()?>/dashboard" class="nav-link d-flex p-t-15 p-b-8 active text-primary">
-                                <i class="bi bi-calendar3 dashboard-icon me-4" aria-hidden="true"></i>
-                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">Calender</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  custom-hover-effect">
-                                <a href="<?=base_URL()?>/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
-                                <i class="bi bi-file-earmark-bar-graph dashboard-icon me-4" style="font-size:21px"></i>
-                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">Draft</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  custom-hover-effect">
-                                <a href="<?=base_URL()?>/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
-                                <i class="bi bi-share-fill dashboard-icon me-3"></i>
-                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">A/C Manager</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  custom-hover-effect">
-                                <a href="<?=base_URL()?>/dashboard" class="nav-link d-flex p-t-12 p-b-8 active text-primary">
-                                <i class="bi bi-folder-symlink dashboard-icon me-4"></i>
-                                
-                                    <span class="text-gray-600 fw-5" style="font-size:1.1rem">File Manager</span>
-                                </a>
-                            </li>
-                           
-                            
-                     
-                        
-                            </ul>
-
-        </div>
+<div class="sidebars sub-sidebar active">
+        <button class="tab-button active" id="media-click" style="border-top-right-radius: 20px;">
+            <i class="icon bi bi-camera2 dashboard-icon me-4"></i>
+         
+        </button>
+        <button class="tab-button" id="link-click">
+            <i class="icon bi bi-link-45deg dashboard-icon me-4"></i>
+           
+        </button>
+        <button class="tab-button" id="text-click" style="border-bottom-right-radius: 20px;">
+            <i class="icon bi bi-textarea-t dashboard-icon me-4"></i>
+          
+        </button>
     </div>
-</div>
+   
+    <script>
+        $(document).ready( function() {
+            $('#media').show();
+            $('#link').hide();
+            $('#text').hide();
+            $('#link-content').hide();
+            $('#text-content').hide();
+            $('#text-card-content').hide();
+            $('#media-content').show();
+
+            $('#media-click').click( function() {
+                $('#link-click').removeClass("active");
+                $('#media-click').addClass("active");
+                $('#text-click').removeClass("active");
+                $('#media').show();
+                $('#link').hide();
+                $('#text').hide();
+                $('#link-content').hide();
+                $('#text-content').hide();
+                $('#text-card-content').hide();
+                $('#media-content').show();
+            })
+            $('#link-click').click( function() {
+                $('#link-click').addClass("active");
+                $('#media-click').removeClass("active");
+                $('#text-click').removeClass("active");
+                $('#media').hide();
+                $('#link').show();
+                $('#text').hide();
+                $('#link-content').show();
+                $('#text-content').hide();
+                $('#text-card-content').hide();
+                $('#media-content').hide();
+            })
+            $('#text-click').click( function() {
+                $('#link-click').removeClass("active");
+                $('#media-click').removeClass("active");
+                $('#text-click').addClass("active");
+                $('#media').hide();
+                $('#link').hide();
+                $('#text').show();
+                $('#link-content').hide();
+                $('#text-content').show();
+                $('#text-card-content').show();
+                $('#media-content').hide();
+            })
+        })
+    </script>
+    

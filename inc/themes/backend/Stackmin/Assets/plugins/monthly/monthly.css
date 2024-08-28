@@ -58,8 +58,8 @@
 /* current month/yr block */
 .monthly-header-title-date,
 .monthly-header-title-date:hover {
-	background: var(--sp-primary)!important;
-	border: 1px solid var(--sp-gray-300)!important;
+	background: #FF5C35!important;
+	border: 1px solid #FF5C35!important;
 	color: #fff!important;
 	cursor: default;
 }
@@ -108,7 +108,7 @@
 	top: 50%;
 	left: 50%;
 	border-style: solid;
-	border-color: var(--sp-primary);
+	border-color: #FF5C35;
 	width: 0.6em;
 	height: 0.6em;
 	margin: -0.4em 0 0 -0.4em;
@@ -141,7 +141,7 @@
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
-    color: var(--sp-primary);
+    color: #FF5C35;
     font-weight: 600;
 
 }
@@ -236,7 +236,7 @@
 /* Current day style */
 .monthly-today .monthly-day-number {
 	color: var(--sp-gray-200);
-	background: var(--sp-primary);
+	background: #FF5C35;
 	border-radius: 0.75em;
 	top: 0.08em;
 	left: 0.05em;

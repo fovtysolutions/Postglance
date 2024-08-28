@@ -1,5 +1,5 @@
 
-<div class="sub-sidebar d-flex flex-column flex-row-auto" style="height:100%">
+<div class="sub-sidebar d-flex flex-column flex-row-auto" style="height:100%;max-width:17rem;">
     <div class="d-flex mb-10 p-20">
         <div class="d-flex align-items-center w-lg-400px">
             <form class="w-100 position-relative ">
