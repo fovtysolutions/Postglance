@@ -184,7 +184,7 @@ $handler->push(Middleware::mapRequest(function (RequestInterface $request) {
     return $request->withHeader('X-Foo', 'Bar');
 }));
 // Inject the handler into the client
-$client = new GuzzleHttp\Client(['handler' => $handler]);
+$client = new GuzzleHttp\Client(['handler' => $handler]);GuzzleHttp\Utils::chooseHandler()
 ```
 
 ## POST Requests

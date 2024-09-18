@@ -43,11 +43,11 @@ class Twitter_profiles extends \CodeIgniter\Controller
             redirect_to( base_url("social_network_settings/index/".$this->config['parent']['id']) ); 
         }
 
-        $this->twitter = new \Smolblog\OAuth2\Client\Provider\Twitter([
-            'clientId'          => $this->client_id,
-            'clientSecret'      => $this->client_secret,
-            'redirectUri'       => $this->callback_url,
-        ]);
+        // $this->twitter = new \Smolblog\OAuth2\Client\Provider\Twitter([
+        //     'clientId'          => $this->client_id,
+        //     'clientSecret'      => $this->client_secret,
+        //     'redirectUri'       => $this->callback_url,
+        // ]);
 
         $this->twitter_options = [
             'scope' => [
@@ -309,6 +309,7 @@ class Twitter_profiles extends \CodeIgniter\Controller
     public function oauth_official(){
         remove_session(['TW_AccessToken']);
         remove_session(['TW_AccessToken_V1']);
+        echo "<script>localStorage.setItem('check', " . print_r($this->twitter_options) . ");</script>";
         try {
             $authUrl = $this->twitter->getAuthorizationUrl($this->twitter_options);
             set_session(["oauth2state" => $this->twitter->getState()]);

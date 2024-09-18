@@ -6,6 +6,7 @@ use Twitter\Text\Parser;
 use Coderjerk\BirdElephant\BirdElephant;
 use Coderjerk\BirdElephant\Compose\Tweet;
 use Coderjerk\BirdElephant\Compose\Media;
+use GuzzleHttp\Client;
 
 class Twitter_postModel extends Model
 {
@@ -194,8 +195,52 @@ class Twitter_postModel extends Model
 
                         case 'text':
 
-                            $tweet = (new Tweet)->text($caption." ".$link);
-                            $response = $twitter->tweets()->tweet($tweet);
+                            //$tweet = (new Tweet)->text($caption." ".$link);
+                            //$response = $twitter->tweets()->tweet($tweet);
+                            $status = $caption . " " . $link;
+                            $oauth = [
+                                'oauth_consumer_key' => $consumerKey,
+                                'oauth_token' => $accessToken,
+                                'oauth_signature_method' => 'HMAC-SHA1',
+                                'oauth_timestamp' => time(),
+                                'oauth_nonce' => bin2hex(random_bytes(16)),
+                                'oauth_version' => '1.0',
+                            ];
+                            $base_info = buildBaseString($url, 'POST', $oauth);
+                            $composite_key = rawurlencode($consumerSecret) . '&' . rawurlencode($accessTokenSecret);
+                            $oauth_signature = base64_encode(hash_hmac('sha1', $base_info, $composite_key, true));
+                            $oauth['oauth_signature'] = $oauth_signature;
+
+                            $authHeader = "OAuth " . buildAuthorizationHeader($oauth);
+                            $client = new Client();
+                            $response = $client->post($url, [
+                                'headers' => [
+                                    'Authorization' => $authHeader,
+                                ],
+                                'form_params' => [
+                                    'status' => $status
+                                ],
+                            ]);
+                            if ($response->getStatusCode() == 200) {
+                                echo "Tweet posted successfully!";
+                            } else {
+                                echo "Failed to post tweet: " . $response->getBody();
+                            }
+                            function buildBaseString($baseURI, $method, $params) {
+                                $r = [];
+                                ksort($params);
+                                foreach($params as $key => $value) {
+                                    $r[] = "$key=" . rawurlencode($value);
+                                }
+                                return $method . "&" . rawurlencode($baseURI) . '&' . rawurlencode(implode('&', $r));
+                            }
+                            function buildAuthorizationHeader($oauth) {
+                                $r = [];
+                                foreach($oauth as $key => $value) {
+                                    $r[] = "$key=\"" . rawurlencode($value) . "\"";
+                                }
+                                return implode(', ', $r);
+                            }
                             break;
                     }
 
