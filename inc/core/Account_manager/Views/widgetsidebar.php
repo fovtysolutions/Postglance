@@ -1,6 +1,4 @@
-<?php
-    $page = uri_string();
-?>
+
 <div class="account_manager w-100 pt-5">
 
 	<div class="am-choice-box active">
@@ -13,13 +11,11 @@
 					<i class="fad fa-address-card"></i> <?php _e("Please select a profile")?>
 				</div>
 			</div>
-
-			<?php if($page == "post") { $classHide = "am-list-account"; ?>
+			<?php if (uri_string() === "post") { $classHide = "am-list-account"; ?>
 				<div class="am-selected-arrow">
 					<i class="fal fa-chevron-up"></i>
 				</div>
-			<?php }?>
-
+			<?php }else{$classHide = '';} ?>
 		</div>
 
 		<div class="<?=$classHide?> border rounded  check-wrap-all">

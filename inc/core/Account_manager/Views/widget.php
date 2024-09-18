@@ -1,6 +1,4 @@
-<?php
-     $page = $this->uri->segment(3);
-?>
+
 <div class="account_manager w-100">
 
 	<div class="am-choice-box">
@@ -13,11 +11,9 @@
 					<i class="fad fa-address-card"></i> <?php _e("Please select a profile")?>
 				</div>
 			</div>
-<?php if($page == "post") {?>
-	<div class="am-selected-arrow">
+	<!-- <div class="am-selected-arrow">
 		<i class="fal fa-chevron-up"></i>
-	</div>
-<?php }?>
+	</div> -->
 		</div>
 
 		<!-- <div class="am-list-account border rounded bg-white check-wrap-all" style="display:block">
