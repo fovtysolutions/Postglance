@@ -1,131 +1,112 @@
 
 <head>
 <style>
-.sidebars {
+
+
+
+.dashboard-icon{
+	font-size: 20px;
+    color: #ff5c35;
+}
+
+.text-gray-600 {
+    color: var(--sp-text-gray-600) !important;
+   margin-left: 0rem !important; 
+  
    
-    display: flex;
-    flex-direction: column;
-    margin-top:116px;
-   
 }
-
-.tab-button {
-    background-color: #f5f8fa;
-    color: #7E8299;
-    border: none;
-    padding: 14px;
-    text-align: left;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-}
-
-.tab-button .icon {
-    margin-right: 10px;
-}
-
-.tab-button:hover {
-    background-color: rgba(255, 219, 193, 0.5);
-}
-
-.tab-button.active {
-    background-color: rgba(255, 219, 193, 0.5);
-}
-
-.tab-content {
-    flex-grow: 1;
-    padding: 20px;
-}
-
-.tab {
-    display: none;
-}
-
-.tab.active {
-    display: block;
-}
-.sub-sidebar {
-    min-width: 4rem;
-     max-width: 4rem;
-   border-right: none; 
-     /* box-shadow: 0 0 80px 50px rgb(206 213 225 / 12%);   */
+.custom-hover-effect {
     position: relative;
-    height: fit-content;
-    background-color: #f5f8fa;
-    
+    transition: background-color 0.3s ease-in-out;
+    background-color: rgba(255, 219, 193, 0.5);
+    border-radius: 5px;
 }
-@media (max-width: 768px) {
-    .sub-sidebar {
-        position: absolute;
-    }
+
+.custom-hover-effect:hover {
+    background-color: rgba(255, 219, 193, 0.5); /* #FFDBC1 with 50% transparency */
+    border-radius: 5px; /* Optional: Add border-radius for smooth edges */
 }
+
 
     </style>
 </head>
 
-<div class="sidebars sub-sidebar active">
-        <button class="tab-button active" id="media-click" style="border-top-right-radius: 20px;">
-            <i class="icon bi bi-camera2 dashboard-icon me-4"></i>
-         
-        </button>
-        <button class="tab-button" id="link-click">
-            <i class="icon bi bi-link-45deg dashboard-icon me-4"></i>
-           
-        </button>
-        <button class="tab-button" id="text-click" style="border-bottom-right-radius: 20px;">
-            <i class="icon bi bi-textarea-t dashboard-icon me-4"></i>
-          
-        </button>
-    </div>
-   
-    <script>
-        $(document).ready( function() {
-            $('#media').show();
-            $('#link').hide();
-            $('#text').hide();
-            $('#link-content').hide();
-            $('#text-content').hide();
-            $('#text-card-content').hide();
-            $('#media-content').show();
 
-            $('#media-click').click( function() {
-                $('#link-click').removeClass("active");
-                $('#media-click').addClass("active");
-                $('#text-click').removeClass("active");
-                $('#media').show();
-                $('#link').hide();
-                $('#text').hide();
-                $('#link-content').hide();
-                $('#text-content').hide();
-                $('#text-card-content').hide();
-                $('#media-content').show();
-            })
-            $('#link-click').click( function() {
-                $('#link-click').addClass("active");
-                $('#media-click').removeClass("active");
-                $('#text-click').removeClass("active");
-                $('#media').hide();
-                $('#link').show();
-                $('#text').hide();
-                $('#link-content').show();
-                $('#text-content').hide();
-                $('#text-card-content').hide();
-                $('#media-content').hide();
-            })
-            $('#text-click').click( function() {
-                $('#link-click').removeClass("active");
-                $('#media-click').removeClass("active");
-                $('#text-click').addClass("active");
-                $('#media').hide();
-                $('#link').hide();
-                $('#text').show();
-                $('#link-content').hide();
-                $('#text-content').show();
-                $('#text-card-content').show();
-                $('#media-content').hide();
-            })
-        })
-    </script>
-    
+<div class="sub-sidebar d-flex flex-column flex-row-auto" style="height: 100%;">
+    <div class="p-20 d-flex mb-10  p-l-10 p-r-20 m-b-12">
+        <div class="sidebar-nav sidebar-nav-one d-flex flex-column flex-column-fluid w-100 pt-lg-0 hide-x-scroll">
+                        <ul class="nav flex-column">
+                            <li class="nav-item custom-hover-effect" id="media-click">
+                                    <a  href="#" class="nav-link d-flex p-t-12 p-b-8  text-primary">
+                                    <i class="icon bi bi-camera2 dashboard-icon me-4" aria-hidden="true"></i>
+                                        <span class="text-gray-600 fw-5" style="font-size:1.1rem">Media</span>
+                                    </a>
+                                </li>                           
+                                <li class="nav-item " id="link-click">
+                                    <a href="#"  class="nav-link d-flex p-t-12 p-b-8  text-primary">
+                                    <i class="icon bi bi-link-45deg dashboard-icon me-4"></i>
+                                        <span class="text-gray-600 fw-5" style="font-size:1.1rem">Link</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item " id="text-click">
+                                    <a href="#" class="nav-link d-flex p-t-15 p-b-8 text-primary">
+                                    <i class="icon bi bi-textarea-t dashboard-icon me-4" aria-hidden="true"></i>
+                                        <span class="text-gray-600 fw-5" style="font-size:1.1rem">Text</span>
+                                    </a>
+                                </li>
+                               
+                             
+                        </ul>
+
+        </div>
+    </div>
+</div>
+    <script>
+	$(document).ready( function(){	
+		$('#media-click').click( function(){
+			$('#media').click();
+            $(this).addClass('custom-hover-effect');
+            $('#link-click').removeClass('custom-hover-effect');
+            $('#text-click').removeClass('custom-hover-effect');
+
+            
+	    })
+		$('#link-click').click( function(){
+			$('#link').click();
+            $(this).addClass('custom-hover-effect');
+            $('#media-click').removeClass('custom-hover-effect');
+            $('#text-click').removeClass('custom-hover-effect');
+
+	    })
+		$('#text-click').click( function(){
+			$('#text').click();
+            $(this).addClass('custom-hover-effect');
+            $('#media-click').removeClass('custom-hover-effect');
+            $('#link-click').removeClass('custom-hover-effect');
+	    })
+	})
+
+    $(document).ready( function(){	
+		$('#media').click( function(){
+
+            $('#media-click').addClass('custom-hover-effect');
+            $('#link-click').removeClass('custom-hover-effect');
+            $('#text-click').removeClass('custom-hover-effect');
+            
+            
+	    })
+		$('#link').click( function(){
+			
+            $('#link-click').addClass('custom-hover-effect');
+            $('#media-click').removeClass('custom-hover-effect');
+            $('#text-click').removeClass('custom-hover-effect');
+
+	    })
+		$('#text').click( function(){
+			
+            $('#text-click').addClass('custom-hover-effect');
+            $('#media-click').removeClass('custom-hover-effect');
+            $('#link-click').removeClass('custom-hover-effect');
+	    })
+	})
+</script>

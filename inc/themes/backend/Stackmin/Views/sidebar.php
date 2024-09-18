@@ -18,6 +18,16 @@
 .text{
     color:#ff5c35;
 }
+.vho{
+    margin-top:5px
+}
+
+li.nav-item.custom-border-hover:hover .vho {
+    color:#ff5c35 !important;
+}
+a:active .vho {
+    color:#ff5c35 !important;
+}
     </style>
 </head>
 
@@ -51,6 +61,7 @@
                                 <li class="nav-item custom-border-hover <?php _e(uri('segment', 1) == $row['id'] ? 'bg-light' : '') ?>" style="border-bottom:1px solid rgba(255,255,255, 0.5)">
                                     <p style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e(uri('segment', 1) == $row['id'] ? 'active text-primary' : 'hoverable') ?>" <?php _ec(get_option("sidebar_type", "sidebar-small") == "sidebar-close" ? 'title="' . $row['name'] . '" data-toggle="tooltip" data-placement="right"' : '') ?>>
                                     <i class="<?php _e($row['icon']) ?> icon-color fs-20 <?php _e(uri('segment', 1) == $row['id'] ? 'text' : '') ?>"></i>
+                                    <span class="fw-5 vho"><?php _e( $row['name'] )?></span>
                                     </p>
                                 </li>
                             </a>
@@ -73,6 +84,7 @@
                             <li class="nav-item custom-border-hover <?php _e(uri('segment', 1) == $row['id'] ? 'bg-light' : '') ?>" style="border-bottom:1px solid rgba(255,255,255, 0.5)">
                                 <p  style="padding:0px" class="nav-link d-flex p-t-12 p-b-8 <?php _e( uri('segment', 1) == $row['id']?'active text-primary':'hoverable' )?>" <?php _ec( ( get_option("sidebar_type", "sidebar-small") == "sidebar-close"  )?'title="'.$row['name'].'" data-toggle="tooltip" data-placement="right"':'' )?>>
                                     <i class="<?php _e($row['icon']) ?> icon-color fs-20 <?php _e(uri('segment', 1) == $row['id'] ? 'text' : '') ?>"></i>
+                                    <span class="vho fw-5"><?php _e( $row['name'] )?></span>
                                 </p>
                                 </li>
                                 </a>

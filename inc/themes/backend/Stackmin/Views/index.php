@@ -33,8 +33,8 @@
         <?php _ec( load_files("css") );?>
         <?php _ec( add_script_to_header() )?>
     </head>
-    <!-- <body class="<?php //_ec( get_option("sidebar_type", "sidebar-small") )?> <?php //_ec( get_option("theme_color", "light") )?>"> -->
-    <body >
+   <body class="<?php _ec( get_option("sidebar_type", "sidebar-small") )?> <?php _ec( get_option("theme_color", "light") )?>"> 
+   
         <div class="loading">
             <div class="loading-icon">
                 <span></span>
