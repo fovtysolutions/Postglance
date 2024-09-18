@@ -1,6 +1,6 @@
-<div class="account_manager w-100">
+<div class="account_manager w-100 pt-5">
 
-	<div class="am-choice-box">
+	<div class="am-choice-box active">
 		
 		<div class="am-selected-box rounded border p-10 d-flex align-items-center justify-content-between">
 			
@@ -11,13 +11,13 @@
 				</div>
 			</div>
 
-			<!-- <div class="am-selected-arrow">
+			<div class="am-selected-arrow">
 				<i class="fal fa-chevron-up"></i>
-			</div> -->
+			</div>
 
 		</div>
 
-		<!-- <div class="am-list-account border rounded bg-white check-wrap-all" style="display:block">
+		<div class=" border rounded  check-wrap-all">
 			<div class="input-group input-group-solid rounded-0">
                 <input type="text" class="form-control search-input" data-search="search-accounts" placeholder="Search">
                 <span class="input-group-text m-r-1 border border-start border-top border-bottom border-gray-300"><i class="fad fa-search fs-18"></i></span>
@@ -29,7 +29,7 @@
                         </div>
                     </a>
                 </div>
-            	<?php echo view_cell('\Core\Group_manager\Controllers\Group_manager::widget') ?>
+            	<?php //echo view_cell('\Core\Group_manager\Controllers\Group_manager::widget') ?>
             </div>
 			<div class="am-choice-body mh-400 overflow-auto">
 				<?php if (!empty($accounts)): ?>
@@ -100,7 +100,7 @@
 				</a>
 			</div>
 
-		</div> -->
+		</div>
 
 	</div>
 

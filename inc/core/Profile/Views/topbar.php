@@ -14,7 +14,7 @@
                 <?php if (!empty($settings)): ?>
                 <a class="dropdown-item py-2" href="<?php _ec( base_url("profile/index/settings") )?>"><i class="fad fa-cog me-2"></i> <?php _e("Settings")?></a>
                 <?php endif ?>
-                <a class="dropdown-item py-2" href="#"><i class="bi bi-robot me-2"></i> <?php _e("AI Composer")?></a>
+                <a class="dropdown-item py-2" href="<?php _ec( base_url("ai_content_generator") )?>"><i class="bi bi-robot me-2"></i> <?php _e("AI Composer")?></a>
                 <a class="dropdown-item py-2" href="<?php _ec( base_url("pricing") )?>"><i class="bi bi-graph-up-arrow me-2"></i> <?php _e("Upgrade")?></a>
                 <li><hr class="border-bottom"></li>
                 <a class="dropdown-item py-2" href="<?php _ec( base_url("auth/logout") )?>"><i class="fad fa-sign-out text-danger me-2"></i> <?php _e("Logout")?></a>

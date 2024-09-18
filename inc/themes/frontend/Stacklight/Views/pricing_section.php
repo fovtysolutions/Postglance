@@ -1,24 +1,45 @@
 <head>
 	
-	<link rel="stylesheet" type="text/css" href="<?php _ec( get_frontend_url() )?>Assets/css/style1.css">
+	
+    <link rel="stylesheet" type="text/css" href="<?php _ec( get_frontend_url() )?>Assets/css/style.css">
 	
 </head>
 <?php if (find_modules("payment")): ?>
-<div class="section pricing container m-b-120" id="pricing">
-    
-    <div class="d-flex justify-content-center align-items-center h-100 mw-800 mx-auto text-center m-b-80" data-aos="fade-down">
-        <div>
-            <h1><?php _e("Pricing")?></h1>
-            <h5 class="text-gray-600"><?php _e("We offer competitive rates and pricing plans to help you find one that fits the needs and budget of your business.")?></h5>
-            <div class="form-check form-switch form-switch-pricing form-check-custom form-check-solid form-check-warning d-flex justify-content-center align-items-center">
-                <label class="form-check-label text-gray-600 ps-0" for="plan_by">
+<div class="nk-section  section pricing container m-b-120" id="pricing">
+
+
+<div class="row justify-content-center text-center ">
+                            <div class="col-lg-8 col-xxl-6">
+                                <div class="nk-section-head pb-3 text-center">
+                                <span class="nk-section-subtitle" style="color:#FF5C35">pricing</span>
+                                <h2 class="nk-section-title" style="font-family:Queens Medium, serif;">Get Started for Free. Add a Plan Later.</h2>
+                                <p class="nk-section-text" style="font-size:1rem">
+                                We offer competitive rates and pricing plans to help you find one that fits the needs and budget of your business.</p>
+                                    <div class="nk-pricing-action-wrap pt-5">
+                                    <div class="form-check form-switch form-switch-pricing form-check-custom form-check-solid form-check-warning d-flex justify-content-center align-items-center">
+                <label class="form-check-label text-gray-600 ps-0" for="plan_by" style="padding-right:50px">
                         <?php _e("Monthly")?>
                 </label>
                 <input class="form-check-input plan_by" type="checkbox" id="plan_by" value="1">
-                <label class="form-check-label text-gray-600" for="plan_by">
+                <label class="form-check-label text-gray-600" for="plan_by" style="padding-right:20px">
                         <?php _e("Annually")?>
                 </label>
             </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="discount-badge-wrap d-inline-block pb-7 ms-lg-7">
+                                <span class="badge text-bg-primary-soft text-uppercase rounded-pill me-2">Get 30% off
+                                </span>
+                                <img src="images/shapes/a.png" alt="" class="mt-n3">
+                            </div>
+                            </div>
+                        </div>
+    
+    <div class="d-flex justify-content-center align-items-center h-100 mw-800 mx-auto text-center m-b-80" data-aos="fade-down">
+        <div>
+            
+           
         </div>
 
     </div>
@@ -37,7 +58,7 @@
                 <?php if ($index == 0): ?>
                     
 
-                    <div class="col-md-3 mb-4">
+                    <!-- <div class="col-md-3 mb-4">
                         <div class="item py-5 d-none d-md-block">
                             
                             <div class="px-4 d-flex justify-content-center align-items-end pricing-feature-comparison">
@@ -84,7 +105,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 <?php endif ?>
 
                 <?php
@@ -115,15 +136,15 @@
                     $permissions = json_decode($plan->permissions, 1);
                 ?>
 
-                <div class="col-md-3 mb-4">
-                    <div class="item shadow position-relative b-r-30 py-5">
+                <div class="col-md-4 mb-4">
+                    <div class="item position-relative b-r-30 py-5" style="border: 1px solid #e5e7eb;border-radius: 0.5rem;">
                         <?php if ($plan->featured): ?>
-                        <div class="featured bg-warning position-absolute w-100 fw-6 text-white text-uppercase"><i class="fad fa-stars"></i> <?php _e("Popular")?></div>
+                        <div class="featured bg-warning position-absolute w-100 fw-6 text-white text-uppercase" style="top: 0px;border-top-left-radius: 0.5rem;border-top-right-radius: 0.5rem;"><i class="fad fa-stars"></i> <?php _e("Popular")?></div>
                         <?php endif ?>
 
                         <div class="pricing-top">
                             <div class="pricing-head px-4 mb-3">
-                                <h1 class="fs-30 text-primary"><?php _e($plan->name)?></h1>
+                                <h3 class="fs-30 text-primary"><?php _e($plan->name)?></h3>
                                 <div class="fs-16 text-gray-600"><?php _e($plan->description)?></div>
                             </div>
 
@@ -154,16 +175,16 @@
                             <?php if ( !empty($plan_items) ): ?>
 
                                 <?php foreach ($plan_items as $plan_item): ?>
-                                    <li class="fs-14 fw-6 text-primary text-uppercase pt-5 pricing-feature-head"><i class="fad fa-stars text-warning fs-20"></i> <?php _e( $plan_item["label"] )?></li>
+                                    <li class="mb-2 fs-14 fw-6 text-primary text-uppercase pt-5 pricing-feature-head" style="font-size:13px!important"><i class="fad fa-stars text-warning fs-20"></i> <?php _e( $plan_item["label"] )?></li>
 
                                     <?php if (!empty($plan_item['items'])): ?>
 
                                         <?php if ( $plan_item['permission'] ): ?>
-                                            <li class="d-block text-center plan-post">
+                                            <li class="d-block text-left plan-post">
                                                 <?php foreach ($plan_item['items'] as $key => $value): ?>
                                                     <?php if ( isset( $permissions[ $value['id'] ] ) && isset( $post_social_networks[ $value['id'] ] ) ): ?>
                                                     <span class="fs-26 d-inline-block w-30 text-center">
-                                                        <i class="<?php _ec( $value['icon'] )?>" style="color: <?php _ec( $value['color'] )?>;"></i>
+                                                        <i class="<?php _ec( $value['icon'] )?>" style="color: <?php _ec( $value['color'] )?>;font-size:25px !important;"></i>
                                                     </span>
                                                     <?php endif ?>
                                                     
@@ -171,7 +192,7 @@
                                             </li>
                                         <?php else: ?>
                                             <?php foreach ($plan_item['items'] as $key => $value): ?>
-                                                <li class="d-flex justify-content-between align-items-center border-bottom py-2">
+                                                <li class="d-flex justify-content-between align-items-center border-bottom">
                                                     <div class="p-t-4 p-b-4 pricing-feature-name"><?php _e($value["name"])?></div>
                                                     <div class="h-40 me-2 fs-23 pricing-feature-icon py-2 <?php _ec( isset( $permissions[ $value['id'] ] )?"text-success":"" )?>"><i class="fad fa-check-circle"></i></div>
                                                 </li>
@@ -219,8 +240,8 @@
                             </li>
                         </ul>
 
-                        <div class="px-4">
-                            <a href="<?php _e( base_url("payment/index/{$plan->ids}/1" ) )?>" class="btn btn-dark btn-lg w-100  b-r-90 by_monthly" href=""><?php _e("Get started")?></a>
+                        <div class="px-4 pt-2">
+                            <a href="<?php _e( base_url("payment/index/{$plan->ids}/1" ) )?>" class="btn btn-block btn-outline-primary" href=""><?php _e("Get started")?></a>
                             <a href="<?php _e( base_url("payment/index/{$plan->ids}/2" ) )?>" class="btn btn-dark btn-lg w-100  b-r-90 by_annually d-none" href=""><?php _e("Get started")?></a>
                         </div>
                     </div>

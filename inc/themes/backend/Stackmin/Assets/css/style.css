@@ -37,7 +37,7 @@ body.dark .header{
 
 body.sidebar-close .header,
 body.sidebar-small .header{
-	width: calc(100% - 345px);
+	width: 100%;
 }
 
 body.sidebar-open .header{
@@ -93,7 +93,7 @@ body.sidebar-open .header{
 
 .sidebar .sidebar-nav .nav .nav-link,
 .sidebar .sidebar-footer .nav-link{
-	color: #b5b5c3;
+	color: #fff;
 	overflow: hidden;
 	border-radius: 6px;
 	margin: 0 17px;
@@ -175,7 +175,7 @@ body.sidebar-hover .sidebar .sidebar-footer .nav-link i{
 
 /*Sidebar Small*/
 body.sidebar-small .sidebar{
-	width: 80px;
+	width: 63px;
 	border-right: 1px solid #eff2f5;
 	align-items: center!important;
 }
@@ -190,7 +190,7 @@ body.sidebar-small .sidebar .logo-small{
 
 body.sidebar-small .sidebar .sidebar-nav .nav .nav-item,
 body.sidebar-small .sidebar .sidebar-footer .nav-item{
-	width: 80px;
+	width: 63px;
 }
 
 body.sidebar-small .sidebar .sidebar-nav .nav .nav-link, 

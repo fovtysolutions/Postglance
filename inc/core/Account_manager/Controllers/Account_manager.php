@@ -50,6 +50,35 @@ class Account_manager extends \CodeIgniter\Controller
 
         return view('Core\Account_manager\Views\widget', ['accounts' => $accounts]);
     }
+    
+    public function widgetsidebar( $params = [] ){
+        $team_id = get_team("id");
+
+        if(isset($params['wheres']) && is_array($params['wheres'])){
+            $wheres["team_id"] = $team_id;
+            $accounts = db_fetch("id,ids,pid,name,pid,category,social_network,avatar,login_type,module", TB_ACCOUNTS, $params['wheres']);
+        }elseif( isset($params['accounts']) && is_array($params['accounts']) ){
+            $field = "id";
+            if( isset($params['field']) && $params['field'] != "" ){
+                $field = $params['field'];
+            }
+            $accounts = $this->model->get_accounts_by( $params['accounts'], $field );
+        }elseif( isset($params['account_id']) && $params['account_id'] != "" ){
+            $accounts = db_fetch("id,ids,pid,name,pid,category,social_network,avatar,login_type,module", TB_ACCOUNTS, [ "can_post" => 1, "team_id" => $team_id, "id" => $params['account_id'] ], "social_network", "ASC");
+        }else{
+            $accounts = db_fetch("id,ids,pid,name,pid,category,social_network,avatar,login_type,module", TB_ACCOUNTS, [ "can_post" => 1, "team_id" => $team_id, "status" => 1 ], "social_network", "ASC");
+        }
+
+
+
+        permission_accounts($accounts);
+
+        if(isset($params['module_permission']) && is_string($params['module_permission'])){
+            permission_accounts_by_module($params['module_permission'], $accounts);
+        }
+
+        return view('Core\Account_manager\Views\widgetsidebar', ['accounts' => $accounts]);
+    }
 
     public function widget_multi_select( $params = [] ){
         $team_id = get_team("id");

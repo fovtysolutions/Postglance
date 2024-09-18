@@ -30,7 +30,7 @@
 </head>
 <div class="d-flex align-items-stretch ms-3 column-gap">
         <div class="d-flex align-items-center">
-                            <a href="#" class="d-none d-md-block btn btn-light-primary btn-sm w-100 fm-open-new-folder">
+                            <a href="<?php _ec( base_url("ai_content_generator") )?>" class="d-none d-md-block btn btn-light-primary btn-sm w-100 fm-open-new-folder">
                             <?php _e("AI Composer") ?>
                             </a>
         </div>
