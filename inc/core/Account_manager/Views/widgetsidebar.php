@@ -1,3 +1,6 @@
+<?php
+    $page = uri_string();
+?>
 <div class="account_manager w-100 pt-5">
 
 	<div class="am-choice-box active">
@@ -11,13 +14,15 @@
 				</div>
 			</div>
 
-			<div class="am-selected-arrow">
-				<i class="fal fa-chevron-up"></i>
-			</div>
+			<?php if($page == "post") { $classHide = "am-list-account"; ?>
+				<div class="am-selected-arrow">
+					<i class="fal fa-chevron-up"></i>
+				</div>
+			<?php }?>
 
 		</div>
 
-		<div class=" border rounded  check-wrap-all">
+		<div class="<?=$classHide?> border rounded  check-wrap-all">
 			<div class="input-group input-group-solid rounded-0">
                 <input type="text" class="form-control search-input" data-search="search-accounts" placeholder="Search">
                 <span class="input-group-text m-r-1 border border-start border-top border-bottom border-gray-300"><i class="fad fa-search fs-18"></i></span>

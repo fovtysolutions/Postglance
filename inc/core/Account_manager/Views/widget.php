@@ -1,5 +1,5 @@
 <?php
-    $page = uri_string();
+     $page = $this->uri->segment(3);
 ?>
 <div class="account_manager w-100">
 
@@ -14,9 +14,9 @@
 				</div>
 			</div>
 <?php if($page == "post") {?>
-			<div class="am-selected-arrow">
-				<i class="fal fa-chevron-up"></i>
-			</div>
+	<div class="am-selected-arrow">
+		<i class="fal fa-chevron-up"></i>
+	</div>
 <?php }?>
 		</div>
 
